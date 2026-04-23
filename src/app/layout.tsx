@@ -22,7 +22,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.devora.fr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "DevOra | Développeur web freelance en Normandie",
+    default: "DevOra | Création de site internet en Normandie – Développeur web freelance",
     template: "%s | DevOra",
   },
   description:

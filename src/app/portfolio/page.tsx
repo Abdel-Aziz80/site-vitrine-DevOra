@@ -24,7 +24,7 @@ const projects = [
     tech: "Next.js, TypeScript, Tailwind CSS",
     live: "",
     github: "",
-    status: "Projet personnel",
+    status: "Projet principal",
   },
   {
     title: "Trouver son artisan",
@@ -34,6 +34,16 @@ const projects = [
     live: "",
     github: "https://github.com/Abdel-Aziz80/trouve-ton-artisan",
     status: "Projet de formation",
+  },
+  {
+    title: "Touche pas à mon klaxon",
+    description:
+      "Application web développée en PHP dans le cadre d’un projet de formation, avec une gestion des données et une logique backend sans framework.",
+    tech: "PHP, HTML, CSS",
+    image: "/portfolio/klaxon.jpg",
+    live: "",
+    github: "https://github.com/Abdel-Aziz80/touche-pas-au-klaxon",
+    status: "Projet backend",
   },
   {
     title: "Maquettes UI - Probeats",
