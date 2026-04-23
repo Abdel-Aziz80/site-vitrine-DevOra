@@ -54,7 +54,7 @@ export default function Contact() {
             </p>
 
             <form
-              action="https://formspree.io/f/TON_ID"
+              action="https://formspree.io/f/xdaypbde"
               method="POST"
               className="mt-8 space-y-5"
             >
