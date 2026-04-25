@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.devora.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr";
 
 export const metadata: Metadata = {
-  title: "Création de site internet en Normandie - DevOra",
+  title: "Création de site internet en Normandie DevOra",
   description:
-    "Développeur web freelance en Normandie - DevOra. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
+    "Développeur web freelance en Normandie DevOra. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
   alternates: {
     canonical: "/",
   },
@@ -111,7 +111,12 @@ const IconEfficace = () => (
 
 const featureIcons = [<IconRapide key="rapide" />, <IconModerne key="moderne" />, <IconEfficace key="efficace" />];
 
-const reassuranceBadges = ["Réponse sous 48h", "Devis gratuit", "Basé en Normandie"];
+const reassuranceBadges = [
+  "Réponse sous 24 à 48h ouvrées",
+  "Devis gratuit",
+  "Sans engagement",
+  "Paiement sécurisé possible via Malt",
+];
 
 export default function Home() {
   return (
@@ -135,19 +140,25 @@ export default function Home() {
               <circle cx="8" cy="8" r="6" />
               <path d="M8 5v3l2 2" strokeLinecap="round" />
             </svg>
-            Développeur web freelance en Normandie — DevOra
+            <span>Développeur web freelance en Normandie</span>
+            <span className="text-neutral-400">— DevOra</span>
           </span>
 
           <h1 className="mt-8 text-5xl font-extrabold tracking-tight text-neutral-900 sm:text-6xl md:text-7xl">
-            Des sites web modernes,
-            <br />
-            clairs et conçus pour convertir
+           Développeur web freelance en Normandie
           </h1>
+            <h2 className="mt-4 text-2xl font-semibold text-[#B86446] md:text-3xl">
+              Création de sites internet modernes
+            </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-600 md:text-xl">
-            J&apos;aide les entreprises, artisans et indépendants à créer une
-            présence en ligne plus crédible, plus visible et plus professionnelle.
-          </p>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-600 md:text-xl">
+              Basé à Rouen, j’accompagne en Normandie et partout en France, en présentiel ou à distance.
+            </p>
+
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-neutral-700">
+              Vous n’avez pas de site ou il ne vous apporte aucun client ?
+              Je crée des sites clairs, rapides et pensés pour générer des demandes.
+            </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -292,6 +303,7 @@ export default function Home() {
             >
               Obtenir un devis gratuit
             </Link>
+
             <Link
               href="/portfolio"
               className="inline-flex rounded-full border border-[#D97757] bg-white px-8 py-4 font-semibold text-[#B86446] transition hover:bg-[#FFF3EA]"
@@ -300,9 +312,18 @@ export default function Home() {
             </Link>
           </div>
 
-          <p className="mt-5 text-sm text-neutral-400">
-            Réponse sous 24 à 48h ouvrées, souvent plus rapide.
-          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            {reassuranceBadges.map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF3EA] px-3 py-1.5 text-xs font-medium text-[#B86446]"
+              >
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D97757]" />
+                {badge}
+              </span>
+            ))}
+          </div> 
+
         </div>
       </section>
     </main>

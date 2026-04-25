@@ -173,6 +173,16 @@ export default function Services() {
             Après un premier échange, je vous propose une solution claire, un
             plan simple et un devis adapté.
           </p>
+
+          {/* CTA */}
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex rounded-full bg-[#D97757] px-8 py-4 font-semibold text-white transition hover:bg-[#c96b4e]"
+            >
+              Demander un devis personnalisé
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -224,46 +234,66 @@ export default function Services() {
       <section className="px-6 pb-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-neutral-900">Ma méthode</h2>
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+              Ma méthode
+            </p>
+
+            <h2 className="text-3xl font-bold text-neutral-900">
+              Un accompagnement simple et efficace
+            </h2>
+
             <p className="mt-4 text-neutral-600 max-w-2xl mx-auto leading-8">
-              Une approche simple, claire et structurée pour avancer efficacement
-              sur votre projet.
+              Une approche claire pour créer un site adapté à votre activité, sans vous
+              perdre dans la technique.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {/* STEP 1 */}
             <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#B86446]">
-                Étape 1
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-neutral-900">Échange</h3>
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#D97757] text-sm font-bold text-white">
+                1
+              </div>
+
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Échange
+              </h3>
+
               <p className="mt-3 text-neutral-600 leading-7">
-                Nous clarifions vos besoins, vos objectifs et l’image que vous
-                souhaitez transmettre.
+                Nous faisons le point sur votre activité, vos besoins et les
+                informations à mettre en avant.
               </p>
             </div>
 
+            {/* STEP 2 */}
             <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#B86446]">
-                Étape 2
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-neutral-900">Conception</h3>
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#D97757] text-sm font-bold text-white">
+                2
+              </div>
+
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Adaptation
+              </h3>
+
               <p className="mt-3 text-neutral-600 leading-7">
-                Je structure le site et conçois une interface moderne, lisible
-                et adaptée à votre activité.
+                J’adapte la structure du site à votre image : textes, couleurs,
+                contenus, sections et appels à l’action.
               </p>
             </div>
 
+            {/* STEP 3 */}
             <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#B86446]">
-                Étape 3
-              </p>
-              <h3 className="mt-3 text-xl font-semibold text-neutral-900">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#D97757] text-sm font-bold text-white">
+                3
+              </div>
+
+              <h3 className="text-xl font-semibold text-neutral-900">
                 Mise en ligne
               </h3>
+
               <p className="mt-3 text-neutral-600 leading-7">
-                Le site est finalisé, vérifié et prêt à être présenté à vos
-                futurs clients.
+                Le site est finalisé, vérifié puis mis en ligne avec une base propre et
+                professionnelle.
               </p>
             </div>
           </div>
