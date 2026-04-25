@@ -82,6 +82,8 @@ export default function MentionsLegales() {
               <br />
               <strong className="text-neutral-900">Adresse :</strong> 123 Main Street, New York, NY 10001
               <br />
+              <strong className="text-neutral-900">Site web :</strong>https://devora-freelance.fr 
+              <br />
               <strong className="text-neutral-900">Site web :</strong> https://vercel.com
             </p>
           </section>

@@ -23,6 +23,12 @@ export default function Footer() {
             <Link href="/services" className="transition hover:text-[#D97757]">
               Services
             </Link>
+            <Link href="/offre" className="transition hover:text-[#D97757]">
+              Offre
+            </Link>
+            <Link href="/portfolio" className="transition hover:text-[#D97757]">
+              Portfolio
+            </Link>
             <Link href="/contact" className="transition hover:text-[#D97757]">
               Contact
             </Link>
@@ -43,7 +49,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-black/5 pt-5 flex flex-col gap-2 text-sm text-neutral-500 md:flex-row md:items-center md:justify-between">
           <p>© {year} DevOra. Tous droits réservés.</p>
-          <p>Exploité par HarmoniaWear</p>
+          <p>Exploité par SAS HarmoniaWear</p>
         </div>
       </div>
     </footer>

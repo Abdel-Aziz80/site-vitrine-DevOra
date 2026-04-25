@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.devora.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr";
 
 const routes = [
   "",
   "/a-propos",
   "/services",
+  "/offre",
+  "/portfolio",
   "/contact",
   "/mentions-legales",
   "/politique-de-confidentialite",

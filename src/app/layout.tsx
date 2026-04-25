@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.devora.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

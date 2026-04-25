@@ -22,7 +22,7 @@ const projects = [
     description:
       "Création d’un site vitrine moderne pour présenter une activité de développeur web freelance, avec une approche centrée sur la clarté, l’image et la conversion.",
     tech: "Next.js, TypeScript, Tailwind CSS",
-    live: "",
+    live: "https://devora-freelance.fr",
     github: "",
     status: "Projet principal",
   },
@@ -138,7 +138,7 @@ export default function Portfolio() {
               href="/contact"
               className="px-8 py-4 bg-[#D97757] text-white rounded-full hover:bg-[#c96b4e] transition"
             >
-              Discuter de mon projet
+              Obtenir un devis gratuit
             </Link>
           </div>
         </div>
