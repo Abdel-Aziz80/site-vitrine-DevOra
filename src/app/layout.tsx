@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "création site vitrine Normandie",
   ],
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/Logo.jpg",
+    shortcut: "/Logo.jpg",
+    apple: "/Logo.jpg",
   },
   openGraph: {
     type: "website",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/Header.png",
         width: 1200,
         height: 630,
-        alt: "DevOra - Création de sites internet à en Normandie",
+        alt: "DevOra - Création de sites internet en Normandie",
       },
     ],
   },
@@ -81,7 +81,7 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white text-neutral-950">
+      <body className="min-h-full bg-[#FBFDFF] text-[#061A35]">
         <Header />
         {children}
         <Analytics />

@@ -59,14 +59,14 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFDF9] via-[#FFF8F3] to-[#FFF3EA]">
+    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       <section className="px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#B86446]">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Portfolio
           </p>
 
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold tracking-tight text-neutral-900">
+          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
             Quelques projets et réalisations
           </h1>
 
@@ -82,13 +82,13 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition"
+              className="bg-white rounded-3xl border border-[#061A35]/10 p-6 shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-[#2DBEB5]/30 transition"
             >
-              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#B86446]">
+              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#173C91]">
                 {project.status}
               </p>
 
-              <h2 className="mt-3 text-xl font-semibold text-neutral-900">
+              <h2 className="mt-3 text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                 {project.title}
               </h2>
 
@@ -102,7 +102,7 @@ export default function Portfolio() {
                 {project.live && (
                   <Link
                     href={project.live}
-                    className="px-4 py-2.5 bg-[#D97757] text-white rounded-full text-center hover:bg-[#c96b4e] transition"
+                    className="px-4 py-2.5 bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] text-white rounded-full shadow-sm text-center hover:brightness-110 transition"
                   >
                     Voir le site
                   </Link>
@@ -111,7 +111,7 @@ export default function Portfolio() {
                 {project.github && (
                   <Link
                     href={project.github}
-                    className="px-4 py-2.5 border border-[#D97757] text-[#B86446] rounded-full text-center hover:bg-[#FFF3EA] transition"
+                    className="px-4 py-2.5 border border-[#173C91] text-[#173C91] rounded-full text-center hover:bg-[#EFF9F8] transition"
                   >
                     Voir le code
                   </Link>
@@ -123,12 +123,12 @@ export default function Portfolio() {
       </section>
 
       <section className="px-6 pb-28">
-        <div className="max-w-4xl mx-auto text-center bg-white rounded-3xl border border-black/5 shadow-sm p-10 md:p-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+        <div className="max-w-4xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
+          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Vous avez un projet en tête ?
           </h2>
 
-          <p className="mt-4 text-neutral-600 max-w-2xl mx-auto leading-8">
+          <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
             Je peux vous accompagner dans la création d’un site internet moderne,
             clair et professionnel, adapté à votre activité.
           </p>
@@ -136,7 +136,7 @@ export default function Portfolio() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-[#D97757] text-white rounded-full hover:bg-[#c96b4e] transition"
+              className="px-8 py-4 bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] text-white rounded-full shadow-sm hover:brightness-110 transition"
             >
               Obtenir un devis gratuit
             </Link>

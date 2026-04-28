@@ -18,19 +18,19 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFDF9] via-[#FFF8F3] to-[#FFF3EA]">
+    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#B86446]">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Contact
           </p>
 
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold tracking-tight text-neutral-900">
+          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
             Parlons de votre projet
           </h1>
 
-          <p className="mt-6 text-lg text-neutral-600 leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
             Vous avez un projet de site internet, une refonte à prévoir ou un
             besoin d’accompagnement digital ? Échangeons ensemble pour trouver
             la solution la plus adaptée à votre activité.
@@ -42,12 +42,12 @@ export default function Contact() {
       <section className="px-6 pb-24">
         <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-2">
           {/* FORMULAIRE */}
-          <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Décrivez votre besoin
             </h2>
 
-            <p className="mt-4 text-neutral-600 leading-7">
+            <p className="mt-4 text-[#475569] leading-7">
               Remplissez ce formulaire pour présenter rapidement votre projet.
               Cela me permettra de mieux comprendre votre besoin et de vous
               répondre plus efficacement.
@@ -67,7 +67,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="nom"
-                  className="mb-2 block text-sm font-medium text-neutral-800"
+                  className="mb-2 block text-sm font-medium text-[#1E293B]"
                 >
                   Nom
                 </label>
@@ -77,14 +77,14 @@ export default function Contact() {
                   type="text"
                   required
                   placeholder="Votre nom"
-                  className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-neutral-900 outline-none transition focus:border-[#D97757] focus:ring-2 focus:ring-[#F5C7B2]"
+                  className="w-full rounded-2xl border border-[#061A35]/10 bg-white px-4 py-3 text-[#061A35] outline-none transition focus:border-[#173C91] focus:ring-2 focus:ring-[#B8F3ED]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-neutral-800"
+                  className="mb-2 block text-sm font-medium text-[#1E293B]"
                 >
                   Email
                 </label>
@@ -94,14 +94,14 @@ export default function Contact() {
                   type="email"
                   required
                   placeholder="votre@email.com"
-                  className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-neutral-900 outline-none transition focus:border-[#D97757] focus:ring-2 focus:ring-[#F5C7B2]"
+                  className="w-full rounded-2xl border border-[#061A35]/10 bg-white px-4 py-3 text-[#061A35] outline-none transition focus:border-[#173C91] focus:ring-2 focus:ring-[#B8F3ED]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="sujet"
-                  className="mb-2 block text-sm font-medium text-neutral-800"
+                  className="mb-2 block text-sm font-medium text-[#1E293B]"
                 >
                   Sujet
                 </label>
@@ -111,14 +111,14 @@ export default function Contact() {
                   type="text"
                   required
                   placeholder="Création de site, refonte, accompagnement..."
-                  className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-neutral-900 outline-none transition focus:border-[#D97757] focus:ring-2 focus:ring-[#F5C7B2]"
+                  className="w-full rounded-2xl border border-[#061A35]/10 bg-white px-4 py-3 text-[#061A35] outline-none transition focus:border-[#173C91] focus:ring-2 focus:ring-[#B8F3ED]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-neutral-800"
+                  className="mb-2 block text-sm font-medium text-[#1E293B]"
                 >
                   Message
                 </label>
@@ -127,14 +127,14 @@ export default function Contact() {
                   name="message"
                   rows={6}
                   placeholder="Décrivez votre activité, votre besoin et ce que vous recherchez"
-                  className="w-full resize-none rounded-2xl border border-black/10 bg-white px-4 py-3 text-neutral-900 outline-none transition focus:border-[#D97757] focus:ring-2 focus:ring-[#F5C7B2]"
+                  className="w-full resize-none rounded-2xl border border-[#061A35]/10 bg-white px-4 py-3 text-[#061A35] outline-none transition focus:border-[#173C91] focus:ring-2 focus:ring-[#B8F3ED]"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-full bg-[#D97757] px-8 py-4 font-semibold text-white transition hover:bg-[#c96b4e]"
+                className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
               >
                 Envoyer ma demande
               </button>
@@ -143,12 +143,12 @@ export default function Contact() {
 
           {/* INFOS / RASSURANCE */}
           <div className="space-y-8">
-            <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-              <h2 className="text-2xl font-bold text-neutral-900">
+            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+              <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                 Comment se passe la suite ?
               </h2>
 
-              <div className="mt-6 space-y-5 text-neutral-600 leading-7">
+              <div className="mt-6 space-y-5 text-[#475569] leading-7">
                 <p>
                   1. Vous m’expliquez votre besoin, votre activité et vos objectifs.
                 </p>
@@ -163,45 +163,45 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-              <h2 className="text-2xl font-bold text-neutral-900">
+            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+              <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                 Tarification
               </h2>
 
-              <p className="mt-4 text-neutral-600 leading-7">
+              <p className="mt-4 text-[#475569] leading-7">
                 Chaque projet est différent. Le tarif dépend du besoin, du niveau
                 de personnalisation, des fonctionnalités attendues et du temps
                 nécessaire à la réalisation.
               </p>
 
-              <p className="mt-4 text-neutral-600 leading-7">
+              <p className="mt-4 text-[#475569] leading-7">
                 Un devis personnalisé est proposé en fonction de votre projet,
                 afin de vous orienter vers une solution claire, cohérente et adaptée.
               </p>
 
-              <p className="mt-4 text-sm text-neutral-500 leading-7">
+              <p className="mt-4 text-sm text-[#64748B] leading-7">
                 Le TJM peut être communiqué dans le cadre d’un échange ou d’une
                 prestation adaptée, mais l’objectif ici est avant tout de proposer
                 une solution cohérente avec votre besoin réel.
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-              <h2 className="text-2xl font-bold text-neutral-900">
+            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+              <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                 Autres pages utiles
               </h2>
 
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/services"
-                  className="px-6 py-3 border border-[#D97757] text-[#B86446] rounded-full hover:bg-[#FFF3EA] transition text-center"
+                  className="px-6 py-3 border border-[#173C91] text-[#173C91] rounded-full hover:bg-[#EFF9F8] transition text-center"
                 >
                   Voir mes services
                 </Link>
 
                 <Link
                   href="/a-propos"
-                  className="px-6 py-3 border border-[#D97757] text-[#B86446] rounded-full hover:bg-[#FFF3EA] transition text-center"
+                  className="px-6 py-3 border border-[#173C91] text-[#173C91] rounded-full hover:bg-[#EFF9F8] transition text-center"
                 >
                   En savoir plus sur moi
                 </Link>

@@ -16,19 +16,19 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFDF9] via-[#FFF8F3] to-[#FFF3EA]">
+    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#B86446]">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Informations légales
           </p>
 
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold tracking-tight text-neutral-900">
+          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
             Mentions légales
           </h1>
 
-          <p className="mt-6 text-lg text-neutral-600 leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
             Retrouvez ici les informations légales relatives à l’édition et à
             l’exploitation du site DevOra.
           </p>
@@ -38,68 +38,66 @@ export default function MentionsLegales() {
       {/* CONTENU */}
       <section className="px-6 pb-24">
         <div className="max-w-4xl mx-auto space-y-8">
-          <section className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Éditeur du site
             </h2>
 
-            <p className="mt-6 text-neutral-600 leading-8">
-              <strong className="text-neutral-900">Nom commercial :</strong> DevOra
+            <p className="mt-6 text-[#475569] leading-8">
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Nom commercial :</strong> DevOra
               <br />
-              <strong className="text-neutral-900">Société exploitante :</strong> HarmoniaWear
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Société exploitante :</strong> HarmoniaWear
               <br />
-              <strong className="text-neutral-900">Forme juridique :</strong> SAS
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Forme juridique :</strong> SAS
               <br />
-              <strong className="text-neutral-900">Siège social :</strong> 6 RUE D&apos;ARMAILLE, 75017 PARIS
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Siège social :</strong> 6 RUE D&apos;ARMAILLE, 75017 PARIS
               <br />
-              <strong className="text-neutral-900">Numéro SIREN :</strong> 943643353
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Numéro SIREN :</strong> 943643353
               <br />
-              <strong className="text-neutral-900">Numéro SIRET :</strong> 94364335300015
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Numéro SIRET :</strong> 94364335300015
               <br />
-              <strong className="text-neutral-900">TVA intracommunautaire :</strong> FR09943643353
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">TVA intracommunautaire :</strong> FR09943643353
               <br />
-              <strong className="text-neutral-900">Email :</strong> contact@harmoniawear.com
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Email :</strong> contact@harmoniawear.com
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Directeur de la publication
             </h2>
 
-            <p className="mt-6 text-neutral-600 leading-8">
+            <p className="mt-6 text-[#475569] leading-8">
               Aziz Ayyad
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Hébergement
             </h2>
 
-            <p className="mt-6 text-neutral-600 leading-8">
-              <strong className="text-neutral-900">Hébergeur :</strong> Vercel Inc.
+            <p className="mt-6 text-[#475569] leading-8">
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Hébergeur :</strong> Vercel Inc.
               <br />
-              <strong className="text-neutral-900">Adresse :</strong> 123 Main Street, New York, NY 10001
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Site édité :</strong>{" "}https://devora-freelance.fr
               <br />
-              <strong className="text-neutral-900">Site web :</strong>https://devora-freelance.fr 
-              <br />
-              <strong className="text-neutral-900">Site web :</strong> https://vercel.com
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Site web :</strong> https://vercel.com
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Propriété intellectuelle
             </h2>
 
-            <p className="mt-6 text-neutral-600 leading-8">
+            <p className="mt-6 text-[#475569] leading-8">
               L’ensemble du contenu présent sur ce site, notamment les textes,
               visuels, éléments graphiques, logo, structure et mise en page, est
               protégé par le droit de la propriété intellectuelle.
             </p>
 
-            <p className="mt-4 text-neutral-600 leading-8">
+            <p className="mt-4 text-[#475569] leading-8">
               Toute reproduction, représentation, modification, publication ou
               adaptation, totale ou partielle, de tout ou partie du site, quel
               que soit le moyen ou le procédé utilisé, est interdite sans
@@ -107,12 +105,12 @@ export default function MentionsLegales() {
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-black/5 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Responsabilité
             </h2>
 
-            <p className="mt-6 text-neutral-600 leading-8">
+            <p className="mt-6 text-[#475569] leading-8">
               Les informations diffusées sur ce site sont fournies à titre
               informatif. Malgré le soin apporté à leur rédaction et à leur mise
               à jour, l’éditeur ne peut garantir l’exactitude, l’exhaustivité ou

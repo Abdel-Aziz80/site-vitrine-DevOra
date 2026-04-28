@@ -52,28 +52,28 @@ const reassuranceBadges = [
 
 export default function OffrePage() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFDF9] via-[#FFF8F3] to-[#FFF3EA]">
+    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="relative overflow-hidden px-6 py-24 text-center">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#FFD9C7] opacity-50 blur-3xl" />
-          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#FFE8D6] opacity-60 blur-3xl" />
+          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E7EEFF] opacity-50 blur-3xl" />
+          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] opacity-60 blur-3xl" />
         </div>
 
         <div className="mx-auto max-w-4xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#E8C8B8] bg-white/80 px-4 py-2 text-sm font-medium text-[#B86446]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
             Offre de lancement DevOra
           </span>
 
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight text-neutral-900 sm:text-6xl md:text-7xl">
+          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
             Site internet clé en main à partir de 600€
           </h1>
 
-          <h2 className="mt-4 text-2xl font-semibold text-[#B86446] md:text-3xl">
+          <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
             Une base professionnelle adaptée à votre activité
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-700">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#334155]">
             Vous avez besoin d’un site internet rapidement, sans vous compliquer
             la vie ? Je pars d’une structure déjà optimisée, puis je l’adapte à
             votre image, à vos contenus et à vos objectifs.
@@ -82,14 +82,14 @@ export default function OffrePage() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="w-full rounded-full bg-[#D97757] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#c96b4e] sm:w-auto"
+              className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm text-center font-semibold text-white transition hover:brightness-110 sm:w-auto"
             >
               Demander mon devis gratuit
             </Link>
 
             <Link
               href="/portfolio"
-              className="w-full rounded-full border border-[#D97757] bg-white px-8 py-4 text-center font-semibold text-[#B86446] transition hover:bg-[#FFF3EA] sm:w-auto"
+              className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
             >
               Voir mes réalisations
             </Link>
@@ -99,9 +99,9 @@ export default function OffrePage() {
             {reassuranceBadges.map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF3EA] px-3 py-1.5 text-xs font-medium text-[#B86446]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF9F8] px-3 py-1.5 text-xs font-medium text-[#173C91]"
               >
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D97757]" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#173C91]" />
                 {badge}
               </span>
             ))}
@@ -111,17 +111,17 @@ export default function OffrePage() {
 
       {/* OFFRE */}
       <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl rounded-4xl border border-black/5 bg-white p-10 shadow-sm md:p-14">
+        <div className="mx-auto max-w-5xl rounded-4xl border border-[#061A35]/10 bg-white p-10 shadow-sm md:p-14">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
               Ce que comprend l’offre
             </p>
 
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Un site vitrine prêt à présenter votre activité
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+            <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
               Cette offre est idéale pour lancer rapidement une présence en
               ligne professionnelle, avec une base claire, moderne et pensée
               pour faciliter la prise de contact.
@@ -132,9 +132,9 @@ export default function OffrePage() {
             {included.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl bg-[#FFF8F3] p-5 text-neutral-700"
+                className="rounded-2xl bg-[#F4FAFC] p-5 text-[#334155]"
               >
-                <span className="font-semibold text-[#B86446]">✓ </span>
+                <span className="font-semibold text-[#173C91]">✓ </span>
                 {item}
               </div>
             ))}
@@ -144,36 +144,36 @@ export default function OffrePage() {
 
       {/* PRIX */}
       <section className="px-6 pb-24">
-        <div className="mx-auto max-w-4xl rounded-4xl border border-black/5 bg-white p-10 text-center shadow-sm md:p-14">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+        <div className="mx-auto max-w-4xl rounded-4xl border border-[#061A35]/10 bg-white p-10 text-center shadow-sm md:p-14">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
             Tarif de lancement
           </p>
 
-          <h2 className="text-4xl font-bold text-neutral-900">
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             À partir de 600€
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
             Le tarif peut évoluer selon le nombre de pages, les contenus à
             intégrer, les fonctionnalités demandées et le niveau de
             personnalisation souhaité.
           </p>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
             L’objectif est simple : vous proposer une solution claire, adaptée à
             votre besoin réel, avec un devis transparent avant de commencer.
           </p>
-        <div className="mx-auto mt-6 max-w-2xl rounded-2xl bg-[#FFF8F3] p-5 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+        <div className="mx-auto mt-6 max-w-2xl rounded-2xl bg-[#F4FAFC] p-5 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
                 Offre limitée
             </p>
 
-            <p className="mt-3 leading-7 text-neutral-700">
+            <p className="mt-3 leading-7 text-[#334155]">
                 Offre de lancement valable jusqu’au 5 mai inclus. Les demandes reçues
                 avant cette date bénéficieront des conditions actuelles.
             </p>
 
-            <p className="mt-2 text-sm text-neutral-500">
+            <p className="mt-2 text-sm text-[#64748B]">
                 Après cette période, les tarifs pourront évoluer selon les disponibilités
                 et la nature du projet.
             </p>
@@ -182,7 +182,7 @@ export default function OffrePage() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex rounded-full bg-[#D97757] px-8 py-4 font-semibold text-white transition hover:bg-[#c96b4e]"
+              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
             >
               Obtenir un devis gratuit
             </Link>
@@ -194,15 +194,15 @@ export default function OffrePage() {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
               Déroulement
             </p>
 
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Une méthode simple pour avancer rapidement
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+            <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
               L’idée n’est pas de vous noyer dans la technique, mais de partir
               d’une base solide et de construire un site adapté à votre activité.
             </p>
@@ -212,17 +212,17 @@ export default function OffrePage() {
             {steps.map((step) => (
                 <div
                 key={step.num}
-                className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
+                className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm"
                 >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#D97757] text-sm font-bold text-white">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
                     {step.num}
                 </div>
 
-                <h3 className="text-xl font-semibold text-neutral-900">
+                <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                     {step.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-neutral-600">
+                <p className="mt-3 leading-7 text-[#475569]">
                     {step.description}
                 </p>
                 </div>
@@ -234,11 +234,11 @@ export default function OffrePage() {
       {/* CTA FINAL */}
       <section className="px-6 pb-28">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-neutral-900">
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Vous voulez lancer votre site rapidement ?
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
             Expliquez-moi votre besoin et je vous dirai si cette offre est
             adaptée à votre projet. Si ce n’est pas le cas, je vous proposerai
             une approche plus cohérente.
@@ -247,14 +247,14 @@ export default function OffrePage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="inline-flex rounded-full bg-[#D97757] px-8 py-4 font-semibold text-white transition hover:bg-[#c96b4e]"
+              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
             >
               Demander mon devis gratuit
             </Link>
 
             <Link
               href="/services"
-              className="inline-flex rounded-full border border-[#D97757] bg-white px-8 py-4 font-semibold text-[#B86446] transition hover:bg-[#FFF3EA]"
+              className="inline-flex rounded-full border border-[#173C91] bg-white px-8 py-4 font-semibold text-[#173C91] transition hover:bg-[#EFF9F8]"
             >
               Voir les services
             </Link>

@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr
 export const metadata: Metadata = {
   title: "Création de site internet en Normandie DevOra",
   description:
-    "Développeur web freelance en Normandie DevOra. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
+    "Développeur web freelance en Normandie - DevOra. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
   alternates: {
     canonical: "/",
   },
@@ -34,19 +34,19 @@ const features = [
     title: "Rapide",
     description:
       "Des sites optimisés pour la performance, le confort de navigation et une meilleure visibilité.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
   },
   {
     title: "Moderne",
     description:
       "Un design clair, responsive et professionnel pour inspirer confiance dès les premières secondes.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`,
   },
   {
     title: "Efficace",
     description:
       "Une structure pensée pour guider vos visiteurs et faciliter la prise de contact.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
   },
 ];
 
@@ -90,20 +90,20 @@ const steps = [
 ];
 
 const IconRapide = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#D97757" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
   </svg>
 );
 
 const IconModerne = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#D97757" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
     <rect x="3" y="3" width="18" height="18" rx="4" />
     <path d="M9 9h6M9 12h6M9 15h4" />
   </svg>
 );
 
 const IconEfficace = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#D97757" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
     <polyline points="16 7 22 7 22 13" />
   </svg>
@@ -120,7 +120,7 @@ const reassuranceBadges = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFDF9] via-[#FFF8F3] to-[#FFF3EA]">
+    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       <Script
         id="devora-jsonld"
         type="application/ld+json"
@@ -130,32 +130,32 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden px-6 py-28 text-center">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#FFD9C7] blur-3xl opacity-50" />
-          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#FFE8D6] blur-3xl opacity-60" />
+          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E7EEFF] blur-3xl opacity-50" />
+          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] blur-3xl opacity-60" />
         </div>
 
         <div className="mx-auto max-w-4xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#E8C8B8] bg-white/80 px-4 py-2 text-sm font-medium text-[#B86446]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-3.5 w-3.5">
               <circle cx="8" cy="8" r="6" />
               <path d="M8 5v3l2 2" strokeLinecap="round" />
             </svg>
             <span>Développeur web freelance en Normandie</span>
-            <span className="text-neutral-400">— DevOra</span>
+            <span className="text-[#94A3B8]">— DevOra</span>
           </span>
 
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight text-neutral-900 sm:text-6xl md:text-7xl">
+          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
            Développeur web freelance en Normandie
           </h1>
-            <h2 className="mt-4 text-2xl font-semibold text-[#B86446] md:text-3xl">
+            <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
               Création de sites internet modernes
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-600 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#475569] md:text-xl">
               Basé à Rouen, j’accompagne en Normandie et partout en France, en présentiel ou à distance.
             </p>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-neutral-700">
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#334155]">
               Vous n’avez pas de site ou il ne vous apporte aucun client ?
               Je crée des sites clairs, rapides et pensés pour générer des demandes.
             </p>
@@ -163,13 +163,13 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="w-full rounded-full bg-[#D97757] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#c96b4e] sm:w-auto"
+              className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm text-center font-semibold text-white transition hover:brightness-110 sm:w-auto"
             >
               Obtenir un devis gratuit
             </Link>
             <Link
               href="/services"
-              className="w-full rounded-full border border-[#D97757] bg-white px-8 py-4 text-center font-semibold text-[#B86446] transition hover:bg-[#FFF3EA] sm:w-auto"
+              className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
             >
               Voir mes services
             </Link>
@@ -180,9 +180,9 @@ export default function Home() {
             {reassuranceBadges.map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF3EA] px-3 py-1.5 text-xs font-medium text-[#B86446]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF9F8] px-3 py-1.5 text-xs font-medium text-[#173C91]"
               >
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D97757]" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#173C91]" />
                 {badge}
               </span>
             ))}
@@ -193,10 +193,10 @@ export default function Home() {
       {/* INTRODUCTION SEO */}
       <section className="px-6 pb-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-neutral-900">
+          <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Création de site internet en Normandie
           </h2>
-          <p className="mt-4 text-neutral-600 leading-8">
+          <p className="mt-4 text-[#475569] leading-8">
             Vous recherchez un développeur web freelance en Normandie pour créer votre site internet ?
             J&apos;accompagne les entreprises, artisans et indépendants à Rouen et dans la région dans la création,
             la refonte et l&apos;optimisation de leur présence en ligne.
@@ -210,13 +210,13 @@ export default function Home() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md hover:border-[#2DBEB5]/30"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF3EA]">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EFF9F8]">
                 {featureIcons[i]}
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">{feature.title}</h3>
-              <p className="mt-3 leading-7 text-neutral-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">{feature.title}</h3>
+              <p className="mt-3 leading-7 text-[#475569]">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -224,15 +224,15 @@ export default function Home() {
 
       {/* POURQUOI DEVORA */}
       <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl rounded-4xl border border-black/5 bg-white p-10 shadow-sm md:p-14">
+        <div className="mx-auto max-w-5xl rounded-4xl border border-[#061A35]/10 bg-white p-10 shadow-sm md:p-14">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
               Pourquoi DevOra
             </p>
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Pourquoi travailler avec DevOra ?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+            <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
               Mon objectif n&apos;est pas simplement de créer un joli site, mais de
               concevoir un outil utile, rassurant et cohérent avec votre activité.
             </p>
@@ -240,11 +240,11 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {values.map((value) => (
-              <div key={value.label} className="rounded-2xl bg-[#FFF8F3] p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+              <div key={value.label} className="rounded-2xl bg-[#F4FAFC] p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
                   {value.label}
                 </p>
-                <p className="mt-3 leading-7 text-neutral-700">{value.description}</p>
+                <p className="mt-3 leading-7 text-[#334155]">{value.description}</p>
               </div>
             ))}
           </div>
@@ -255,13 +255,13 @@ export default function Home() {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#B86446]">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
               Ma méthode
             </p>
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Un accompagnement simple et efficace
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-neutral-600 leading-8">
+            <p className="mx-auto mt-4 max-w-2xl text-[#475569] leading-8">
               De la conception à la mise en ligne, je vous accompagne à chaque étape
               pour créer un site qui correspond réellement à vos objectifs.
             </p>
@@ -271,13 +271,13 @@ export default function Home() {
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
+                className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#D97757] text-sm font-bold text-white">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
                   {step.num}
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900">{step.title}</h3>
-                <p className="mt-3 leading-7 text-neutral-600">{step.description}</p>
+                <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">{step.title}</h3>
+                <p className="mt-3 leading-7 text-[#475569]">{step.description}</p>
               </div>
             ))}
           </div>
@@ -287,11 +287,11 @@ export default function Home() {
       {/* CTA FINAL */}
       <section className="px-6 pb-28">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-neutral-900">
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Un projet de site internet ?
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
             Discutons ensemble de votre activité, de vos besoins et de la
             meilleure façon de construire une présence en ligne moderne et efficace.
           </p>
@@ -299,14 +299,14 @@ export default function Home() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="inline-flex rounded-full bg-[#D97757] px-8 py-4 font-semibold text-white transition hover:bg-[#c96b4e]"
+              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
             >
               Obtenir un devis gratuit
             </Link>
 
             <Link
               href="/portfolio"
-              className="inline-flex rounded-full border border-[#D97757] bg-white px-8 py-4 font-semibold text-[#B86446] transition hover:bg-[#FFF3EA]"
+              className="inline-flex rounded-full border border-[#173C91] bg-white px-8 py-4 font-semibold text-[#173C91] transition hover:bg-[#EFF9F8]"
             >
               Voir mes réalisations
             </Link>
@@ -316,9 +316,9 @@ export default function Home() {
             {reassuranceBadges.map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF3EA] px-3 py-1.5 text-xs font-medium text-[#B86446]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF9F8] px-3 py-1.5 text-xs font-medium text-[#173C91]"
               >
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D97757]" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#173C91]" />
                 {badge}
               </span>
             ))}

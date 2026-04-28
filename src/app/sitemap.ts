@@ -9,6 +9,9 @@ const routes = [
   "/offre",
   "/portfolio",
   "/contact",
+  "/rouen",
+  "/normandie",
+  "/france",
   "/mentions-legales",
   "/politique-de-confidentialite",
 ];
