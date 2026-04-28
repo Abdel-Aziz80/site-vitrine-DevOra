@@ -8,7 +8,10 @@ const links = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
   { href: "/services", label: "Services" },
-  { href: "/offre", label: "Offre du moment" },
+  { href: "/rouen", label: "Rouen" },
+  { href: "/normandie", label: "Normandie" },
+  { href: "/france", label: "France" },
+  { href: "/offre", label: "Offres" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
@@ -17,35 +20,27 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[#061A35]/10 bg-white/90 backdrop-blur">
       <nav className="mx-auto max-w-6xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/Logo-site-devora.svg"
-              alt="Logo DevOra"
-              width={44}
-              height={44}
+              src="/devora-header.png"
+              alt="Logo DevOra Freelance - Développement web"
+              width={180}
+              height={70}
               priority
-              className="h-11 w-11"
+              className="h-12 w-auto object-contain"
             />
-            <div className="leading-tight">
-              <span className="block text-2xl font-bold tracking-tight text-neutral-900">
-                DevOra
-              </span>
-              <span className="block text-sm text-[#D97757]">
-                Développement web
-              </span>
-            </div>
           </Link>
 
           {/* Desktop */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-5 lg:gap-8 lg:flex">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-neutral-700 transition hover:text-[#D97757]"
+                className="text-sm font-medium text-[#334155] transition hover:text-[#173C91]"
               >
                 {link.label}
               </Link>
@@ -57,7 +52,7 @@ export default function Header() {
             type="button"
             aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex items-center justify-center rounded-xl border border-black/10 px-3 py-2 text-neutral-800 transition hover:bg-[#FFF3EA] md:hidden"
+            className="inline-flex items-center justify-center rounded-xl border border-[#061A35]/10 px-3 py-2 text-[#1E293B] transition hover:bg-[#EFF9F8] lg:hidden"
           >
             <span className="text-xl leading-none">{isOpen ? "✕" : "☰"}</span>
           </button>
@@ -65,14 +60,14 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="mt-4 rounded-2xl border border-black/5 bg-white p-4 shadow-sm md:hidden">
+          <div className="mt-4 rounded-2xl border border-[#061A35]/10 bg-white p-4 shadow-sm md:hidden">
             <div className="flex flex-col gap-3">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="rounded-xl px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-[#FFF8F3] hover:text-[#D97757]"
+                  className="rounded-xl px-3 py-2 text-sm font-medium text-[#334155] transition hover:bg-[#F4FAFC] hover:text-[#173C91]"
                 >
                   {link.label}
                 </Link>
