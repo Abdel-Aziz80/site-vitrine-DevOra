@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Développeur web freelance à Rouen | Création de site internet",
+  title: "Développeur web freelance Le Havre | Création de site internet",
   description:
-    "Développeur web freelance à Rouen. Création de sites internet professionnels, refonte, SEO local et accompagnement digital. Devis gratuit.",
-  alternates: { canonical: "/rouen" },
+    "Développeur web freelance Le Havre. Création de sites internet professionnels, refonte, SEO local et accompagnement digital. Devis gratuit.",
+  alternates: { canonical: "/le-havre" },
 };
 
 const services = [
@@ -37,16 +37,16 @@ export default function Page() {
 
         <div className="mx-auto max-w-6xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
-            Développeur web freelance à Rouen
+            Développeur web freelance au Havre
           </span>
           <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
-            Développeur web freelance à Rouen
+            Développeur web freelance au Havre
             <br />
             <span className="bg-linear-to-r from-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Création de sites internet professionnels</span>
           </h1>
           <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">Un site clair, responsive et pensé pour générer des demandes</h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#334155]">
-            Vous avez besoin d’un site internet sérieux pour présenter votre activité à Rouen ? Je vous accompagne avec une approche simple : un site propre, lisible, adapté à vos clients et conçu pour faciliter la prise de contact.
+            Vous avez besoin d’un site internet sérieux pour présenter votre activité au Havre ? Je vous accompagne avec une approche simple : un site propre, lisible, adapté à vos clients et conçu pour faciliter la prise de contact.
           </p>
           <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
             Basé en Normandie, j’accompagne les entrepreneurs, indépendants, artisans et petites entreprises sur des projets de création de site vitrine, de refonte ou d’amélioration de visibilité Google.
@@ -62,7 +62,7 @@ export default function Page() {
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
           <div className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm md:p-10">
             <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">Besoin concret</p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Création de site internet à Rouen</h2>
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Création de site internet au Havre</h2>
             <p className="mt-5 leading-8 text-[#475569]">Un bon site ne doit pas seulement être joli. Il doit expliquer clairement ce que vous proposez, rassurer vos visiteurs et leur donner envie de vous contacter. C’est cette logique que j’applique pour chaque projet : structure, contenu, responsive, vitesse et SEO de base.</p>
             <p className="mt-4 leading-8 text-[#475569]">L’objectif est de créer une présence en ligne professionnelle, adaptée à votre activité et compréhensible par vos futurs clients.</p>
           </div>

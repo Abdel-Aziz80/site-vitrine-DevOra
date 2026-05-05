@@ -19,7 +19,7 @@ export default function MentionsLegales() {
     <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Informations légales
           </p>
@@ -28,7 +28,7 @@ export default function MentionsLegales() {
             Mentions légales
           </h1>
 
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
             Retrouvez ici les informations légales relatives à l’édition et à
             l’exploitation du site DevOra.
           </p>
@@ -37,7 +37,7 @@ export default function MentionsLegales() {
 
       {/* CONTENU */}
       <section className="px-6 pb-24">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-8">
           <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
             <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Éditeur du site
@@ -58,7 +58,7 @@ export default function MentionsLegales() {
               <br />
               <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">TVA intracommunautaire :</strong> FR09943643353
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Email :</strong> contact@harmoniawear.com
+              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Email :</strong> contact@devora-freelance.fr
             </p>
           </section>
 

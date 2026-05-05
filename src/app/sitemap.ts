@@ -9,8 +9,12 @@ const routes = [
   "/offre",
   "/portfolio",
   "/contact",
-  "/rouen",
+  "/simulateur",
   "/normandie",
+  "/rouen",
+  "/caen",
+  "/le-havre",
+  "/evreux",
   "/france",
   "/mentions-legales",
   "/politique-de-confidentialite",
@@ -18,11 +22,10 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.7,
+    priority: route === "" ? 1 : route === "/normandie" ? 0.9 : 0.7,
   }));
 }

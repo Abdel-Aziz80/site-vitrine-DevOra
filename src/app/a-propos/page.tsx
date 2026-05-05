@@ -21,7 +21,7 @@ export default function About() {
     <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             À propos
           </p>
@@ -30,7 +30,7 @@ export default function About() {
             Une approche moderne, claire et orientée résultat
           </h1>
 
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
             Développeur web freelance en Normandie, j’accompagne les entreprises,
             artisans et indépendants dans la création de sites internet
             professionnels, pensés pour inspirer confiance et soutenir leur activité.
@@ -40,7 +40,7 @@ export default function About() {
 
       {/* MON OBJECTIF */}
       <section className="px-6 pb-20">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
+        <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
           <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Mon objectif
           </h2>
@@ -75,7 +75,7 @@ export default function About() {
               Une méthode simple et efficace
             </h2>
 
-            <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
+            <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
               Chaque projet suit une logique claire pour avancer dans la bonne
               direction, sans complexité inutile.
             </p>
@@ -117,7 +117,7 @@ export default function About() {
 
       {/* POURQUOI ME CHOISIR */}
       <section className="px-6 pb-20">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
+        <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
           <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Pourquoi travailler avec DevOra ?
           </h2>
@@ -133,12 +133,12 @@ export default function About() {
 
       {/* CTA */}
       <section className="px-6 pb-28">
-        <div className="max-w-4xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
+        <div className="max-w-6xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Vous avez un projet de site internet ?
           </h2>
 
-          <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
+          <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
             Discutons ensemble de vos besoins et de la meilleure manière de
             construire une présence en ligne claire, moderne et efficace.
           </p>

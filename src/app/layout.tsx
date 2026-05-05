@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "DevOra",
     images: [
       {
-        url: "/Header.png",
+        url: "/devora-header.png",
         width: 1200,
         height: 630,
         alt: "DevOra - Création de sites internet en Normandie",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/Header.png"],
+    images: ["/devora-header.png"],
   },
   robots: {
     index: true,

@@ -2,77 +2,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Création de site internet en France - Développeur web freelance",
-  description:
-    "Développeur web freelance en France. Création de sites internet modernes et performants pour générer des clients.",
-  alternates: {
-    canonical: "/france",
-  },
+  title: "Développeur web freelance en France | Création de site internet à distance",
+  description: "Développeur web freelance en France. Création de sites internet professionnels à distance, site vitrine, refonte, SEO et accompagnement digital. Devis gratuit.",
+  alternates: { canonical: "/france" },
 };
+
+const remoteBenefits = ["Échanges simples par téléphone, visio ou email", "Suivi clair du projet étape par étape", "Site responsive et adapté à votre activité", "Devis transparent avant de commencer", "Accompagnement possible après la mise en ligne", "Travail à distance partout en France"];
 
 export default function FrancePage() {
   return (
     <main className="min-h-screen bg-linear-to-b from-white via-[#F8FEFD] to-[#EFF9F8]">
-
-      <section className="px-6 py-24 text-center">
-        <div className="mx-auto max-w-5xl">
-
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
-            Création de site internet{" "}
-            <span className="bg-linear-to-r from-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              en France
-            </span>
-          </h1>
-
-          <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
-            Basé en Normandie, j’accompagne des professionnels partout en France dans la création de sites efficaces.
-          </p>
-
-          <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">
-            Un site pensé pour générer des demandes, pas juste être visible.
-          </p>        
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-4xl text-center">
-
-          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-            Exemples de sites
-          </p>
-
-          <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
-            Des exemples concrets pour illustrer les possibilités
-          </h2>
-
-          <p className="mt-6 text-neutral-600 leading-8 max-w-2xl mx-auto">
-            Je développe actuellement plusieurs exemples de sites internet pour
-            montrer les différentes possibilités de création : artisan, restaurant,
-            coach, entreprise locale…
-            <br /><br />
-            L’objectif est simple : vous permettre de visualiser concrètement ce qu’il
-            est possible de mettre en place pour votre activité.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row justify-center">
-            <Link
-              href="/portfolio"
-              className="rounded-full border border-[#173C91] px-8 py-4 text-[#173C91] font-semibold hover:bg-[#EFF9F8] transition"
-            >
-              Voir les exemples
-            </Link>
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 text-white font-semibold shadow-lg hover:scale-105 transition"
-            >
-              Obtenir un devis gratuit
-            </Link>
-          </div>
-
-        </div>
-      </section>
-
+      <section className="relative overflow-hidden px-6 py-24 text-center"><div className="absolute inset-0 -z-10"><div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E7EEFF] opacity-50 blur-3xl" /><div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] opacity-60 blur-3xl" /></div><div className="mx-auto max-w-6xl"><span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">Développeur web freelance en France</span><h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">Création de site internet en France<br /><span className="bg-linear-to-r from-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Un accompagnement clair, même à distance</span></h1><h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">Pour entrepreneurs, indépendants et entreprises qui veulent une présence en ligne sérieuse</h2><p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#334155]">Basé en Normandie, j’accompagne des professionnels partout en France dans la création de sites internet professionnels, responsive et pensés pour générer des contacts.</p><p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">Même à distance, l’objectif reste simple : comprendre votre besoin, structurer votre site, mettre en avant votre activité et faciliter la prise de contact.</p><div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"><Link href="/contact" className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 text-center font-semibold text-white shadow-lg transition hover:brightness-110 sm:w-auto">Demander un devis gratuit</Link><Link href="/portfolio" className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto">Voir les exemples</Link></div></div></section>
+      <section className="px-6 pb-24"><div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2"><div className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm md:p-10"><p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">Travail à distance</p><h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Un fonctionnement simple, même sans rendez-vous physique</h2><p className="mt-5 leading-8 text-[#475569]">Un projet web peut avancer efficacement à distance si les échanges sont clairs. Nous faisons le point sur vos besoins, vos contenus, vos objectifs et les éléments à mettre en avant avant de lancer la réalisation.</p><p className="mt-4 leading-8 text-[#475569]">Cette méthode permet de travailler avec des clients partout en France, sans limiter votre projet à une ville ou à une région précise.</p></div><div className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm md:p-10"><p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">Avantages</p><h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Un site professionnel sans complexité inutile</h2><div className="mt-8 grid gap-4">{remoteBenefits.map((benefit) => (<div key={benefit} className="rounded-2xl bg-[#F4FAFC] p-5 text-[#334155]"><span className="font-semibold text-[#173C91]">✓ </span>{benefit}</div>))}</div></div></div></section>
+      <section className="px-6 pb-24"><div className="mx-auto max-w-6xl rounded-4xl border border-[#061A35]/10 bg-white p-10 text-center shadow-sm md:p-14"><p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">Exemples de projets</p><h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">Site vitrine, refonte, SEO et présence en ligne</h2><p className="mx-auto mt-6 max-w-3xl leading-8 text-[#475569]">Je peux intervenir sur des besoins simples et utiles : lancer un premier site, améliorer une page existante, rendre un site plus clair, renforcer la visibilité Google ou créer une base propre pour votre communication.</p><div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"><Link href="/offre" className="inline-flex rounded-full border border-[#173C91] bg-white px-8 py-4 font-semibold text-[#173C91] transition hover:bg-[#EFF9F8]">Voir les offres</Link><Link href="/contact" className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 font-semibold text-white shadow-sm transition hover:brightness-110">Parler de mon projet</Link></div></div></section>
     </main>
   );
 }

@@ -20,7 +20,7 @@ export default function PolitiqueDeConfidentialite() {
     <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       {/* HERO */}
       <section className="px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Données personnelles
           </p>
@@ -29,7 +29,7 @@ export default function PolitiqueDeConfidentialite() {
             Politique de confidentialité
           </h1>
 
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
             Cette page explique quelles données peuvent être collectées via le
             site DevOra et dans quel cadre elles sont utilisées.
           </p>
@@ -38,7 +38,7 @@ export default function PolitiqueDeConfidentialite() {
 
       {/* CONTENU */}
       <section className="px-6 pb-24">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-8">
           <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
             <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Responsable du traitement
@@ -131,7 +131,7 @@ export default function PolitiqueDeConfidentialite() {
             <p className="mt-4 text-[#475569] leading-8">
               Pour exercer vos droits, vous pouvez écrire à :
               <br />
-              contact@harmoniawear.com
+              contact@devora-freelance.fr
             </p>
           </section>
 

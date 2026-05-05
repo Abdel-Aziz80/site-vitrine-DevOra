@@ -99,7 +99,7 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
       <section className="px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
             Services
           </p>
@@ -108,7 +108,7 @@ export default function Services() {
             Des prestations claires pour développer votre présence en ligne
           </h1>
 
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
             Je vous accompagne dans la création, la refonte et l’amélioration de
             votre site internet avec une approche simple, moderne et adaptée à
             votre activité.
@@ -117,15 +117,15 @@ export default function Services() {
       </section>
 
       <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
           {prestations.map((prestation) => (
             <article
               key={prestation.title}
               className={`bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 hover:-translate-y-1 hover:shadow-md hover:border-[#2DBEB5]/30 transition ${
-                prestation.title === "Application web sur mesure" ? "md:col-span-2" : ""
+                prestation.title === "Application web sur mesure" ? "lg:col-span-2" : ""
               }`}
             >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <h2 className="text-2xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                   {prestation.title}
                 </h2>
@@ -158,7 +158,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto mt-10 rounded-3xl border border-[#061A35]/10 bg-white p-8 text-center shadow-sm">
+        <div className="max-w-6xl mx-auto mt-10 rounded-3xl border border-[#061A35]/10 bg-white p-8 text-center shadow-sm">
           <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Des tarifs indicatifs, adaptés à votre projet
           </h2>
@@ -178,7 +178,7 @@ export default function Services() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex rounded-full bg-linear-to-r-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
+              className="px-8 py-4 bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] text-white rounded-full shadow-sm hover:brightness-110 transition"
             >
               Demander un devis personnalisé
             </Link>
@@ -187,16 +187,16 @@ export default function Services() {
       </section>
 
       <section className="px-6 pb-20">
-        <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-12">
+        <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Pour qui ?</h2>
-            <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
+            <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
               Mes services s’adressent aux professionnels qui ont besoin d’un
               site sérieux, clair et efficace pour mieux présenter leur activité.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="rounded-2xl bg-[#F4FAFC] p-6">
               <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
                 Entreprises
@@ -232,7 +232,7 @@ export default function Services() {
 
       {/* MÉTHODE */}
       <section className="px-6 pb-20">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
               Ma méthode
@@ -242,13 +242,13 @@ export default function Services() {
               Un accompagnement simple et efficace
             </h2>
 
-            <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
+            <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
               Une approche claire pour créer un site adapté à votre activité, sans vous
               perdre dans la technique.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
             {/* STEP 1 */}
             <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8">
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
@@ -301,12 +301,12 @@ export default function Services() {
       </section>
 
       <section className="px-6 pb-28">
-        <div className="max-w-4xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
+        <div className="max-w-6xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Vous avez un projet de site internet ?
           </h2>
 
-          <p className="mt-4 text-[#475569] max-w-2xl mx-auto leading-8">
+          <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
             Envoyez-moi votre besoin et je vous proposerai une première approche
             claire, adaptée à votre activité.
           </p>

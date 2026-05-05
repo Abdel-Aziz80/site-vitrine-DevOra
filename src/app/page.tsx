@@ -18,7 +18,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "DevOra",
   url: siteUrl,
-  email: "contact@harmoniawear.com",
+  email: "contact@devora-freelance.fr",
   areaServed: ["Rouen", "Normandie"],
   description:
     "Création de sites vitrines modernes, refonte de site et accompagnement digital.",
@@ -118,6 +118,28 @@ const reassuranceBadges = [
   "Paiement sécurisé possible via Malt",
 ];
 
+// Témoignages clients (à personnaliser avec des avis réels pour renforcer la preuve sociale).
+// const testimonials = [
+//   {
+//     name: "Jean Dupont",
+//     function: "Artisan boulanger",
+//     message:
+//       "DevOra a réalisé notre site rapidement et de manière professionnelle. Nos ventes ont augmenté et nos clients nous trouvent plus facilement.",
+//   },
+//   {
+//     name: "Sophie Martin",
+//     function: "Coach bien-être",
+//     message:
+//       "Je recommande DevOra pour son écoute et la clarté de ses propositions. Mon site est beau et me permet de recevoir des demandes régulières.",
+//   },
+//   {
+//     name: "Michel Leroy",
+//     function: "Entrepreneur local",
+//     message:
+//       "Grâce au site réalisé par DevOra, j'ai gagné en crédibilité auprès de mes prospects et je reçois des devis chaque semaine.",
+//   },
+// ];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
@@ -134,45 +156,53 @@ export default function Home() {
           <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] blur-3xl opacity-60" />
         </div>
 
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-3.5 w-3.5">
               <circle cx="8" cy="8" r="6" />
               <path d="M8 5v3l2 2" strokeLinecap="round" />
             </svg>
             <span>Développeur web freelance en Normandie</span>
-            <span className="text-[#94A3B8]">— DevOra</span>
+            <span className="text-[#94A3B8]">DevOra</span>
           </span>
 
           <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
            Développeur web freelance en Normandie
           </h1>
             <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
-              Création de sites internet modernes
+              Je crée des sites internet qui génèrent des demandes de clients
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#475569] md:text-xl">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#475569] md:text-xl">
               Basé à Rouen, j’accompagne en Normandie et partout en France, en présentiel ou à distance.
             </p>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#334155]">
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#334155]">
               Vous n’avez pas de site ou il ne vous apporte aucun client ?
               Je crée des sites clairs, rapides et pensés pour générer des demandes.
             </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm text-center font-semibold text-white transition hover:brightness-110 sm:w-auto"
-            >
-              Obtenir un devis gratuit
-            </Link>
-            <Link
-              href="/services"
-              className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
-            >
-              Voir mes services
-            </Link>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/contact"
+                className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm text-center font-semibold text-white transition hover:brightness-110 sm:w-auto"
+              >
+                Je veux mon devis gratuit
+              </Link>
+
+              <Link
+                href="/simulateur"
+                className="w-full rounded-full bg-[#EFF9F8] px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#DDF8F5] sm:w-auto"
+              >
+                Estimer mon projet en 30 secondes
+              </Link>
+
+              <Link
+                href="/services"
+                className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
+              >
+                Voir mes services
+              </Link>
           </div>
 
           {/* Badges de réassurance */}
@@ -232,7 +262,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Pourquoi travailler avec DevOra ?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
+            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
               Mon objectif n&apos;est pas simplement de créer un joli site, mais de
               concevoir un outil utile, rassurant et cohérent avec votre activité.
             </p>
@@ -261,7 +291,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
               Un accompagnement simple et efficace
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#475569] leading-8">
+            <p className="mx-auto mt-4 max-w-3xl text-[#475569] leading-8">
               De la conception à la mise en ligne, je vous accompagne à chaque étape
               pour créer un site qui correspond réellement à vos objectifs.
             </p>
@@ -284,14 +314,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TÉMOIGNAGES */}
+      {/* <section className="px-6 pb-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
+              Témoignages
+            </p>
+            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+              Ils me font confiance
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
+              Voici quelques retours de clients satisfaits. Ces témoignages authentiques renforcent la preuve sociale et rassurent vos futurs prospects.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <div key={t.name} className="flex flex-col rounded-3xl border border-[#061A35]/10 bg-white p-6 shadow-sm">
+                <div className="mb-4">
+                  <svg viewBox="0 0 24 24" fill="#2DBEB5" className="h-6 w-6">
+                    <path d="M12 .587l3.668 7.431 8.215 1.192-5.941 5.788 1.404 8.201L12 18.901l-7.346 3.866 1.404-8.201L.117 9.21l8.215-1.192z" />
+                  </svg>
+                </div>
+                <p className="mb-6 text-[#334155] leading-7">
+                  “{t.message}”
+                </p>
+                <div className="mt-auto">
+                  <p className="font-semibold text-[#061A35]">{t.name}</p>
+                  <p className="text-sm text-[#64748B]">{t.function}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>  */}
+
       {/* CTA FINAL */}
       <section className="px-6 pb-28">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
             Un projet de site internet ?
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#475569]">
+          <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
             Discutons ensemble de votre activité, de vos besoins et de la
             meilleure façon de construire une présence en ligne moderne et efficace.
           </p>
@@ -301,7 +366,7 @@ export default function Home() {
               href="/contact"
               className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
             >
-              Obtenir un devis gratuit
+              Je veux mon devis gratuit
             </Link>
 
             <Link
