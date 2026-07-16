@@ -1,501 +1,366 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import CodeAtmosphere from "@/components/CodeAtmosphere";
+import TrackedLink from "@/components/TrackedLink";
+import { portfolioProjects } from "@/lib/portfolio";
+import {
+  creationOffers,
+  faqs,
+  maintenanceOffers,
+  processSteps,
+  quickOffers,
+  reassuranceBadges,
+} from "@/lib/siteContent";
 
 export const metadata: Metadata = {
-  title: "Offres DevOra | Création, dépannage, SEO et maintenance de site web",
+  title: "Offres DEVORA - sites, outils métier, automatisation et Sentinel",
   description:
-    "Offres DevOra pour création de site internet, dépannage, refonte, SEO, automatisations simples et maintenance. Interventions dès 50€, devis gratuit.",
+    "Offres DEVORA : page de vente, site starter, outil métier, tableau de pilotage, automatisation utile, e-commerce, Sentinel et maintenance.",
   alternates: { canonical: "/offre" },
 };
 
-const quickOffers = [
-  {
-    price: "50€ HT",
-    title: "Modification simple",
-    text: "Texte, bouton, lien, image, petite correction visible ou ajustement rapide sur une page existante.",
-  },
-  {
-    price: "100€ HT",
-    title: "Correction ou amélioration ciblée",
-    text: "Correction d’un bloc, amélioration responsive simple, ajustement visuel ou petit dépannage technique.",
-  },
-  {
-    price: "150€ HT",
-    title: "Audit express",
-    text: "Analyse rapide de votre site : clarté, responsive, SEO de base, points bloquants et recommandations concrètes.",
-  },
-];
-
-const creationOffers = [
-  {
-    price: "À partir de 250€ HT",
-    title: "Landing page",
-    text: "Une page professionnelle pour présenter une offre, un service ou une activité avec un appel à l’action clair.",
-  },
-  {
-  price: "600€ HT",
-  title: "Site vitrine starter — offre de lancement",
-  text: "Offre spéciale prolongée 7 jours, limitée aux 10 premiers projets validés. Site vitrine professionnel avec structure claire, responsive, pages essentielles, formulaire de contact et SEO de base.",
-  },
-  {
-    price: "900€ HT",
-    title: "Site vitrine starter — tarif classique",
-    text: "Le même type de site vitrine starter, hors offre de lancement, avec structure professionnelle, responsive, pages essentielles, formulaire de contact et SEO de base.",
-  },
-  {
-    price: "1200€ HT",
-    title: "Site vitrine complet",
-    text: "Site vitrine plus complet avec plusieurs pages, structure SEO renforcée, responsive premium et accompagnement plus poussé.",
-  },
-  {
-    price: "Sur devis",
-    title: "Projet sur mesure",
-    text: "Besoin spécifique, fonctionnalités particulières, structure avancée, espace dynamique ou projet plus complet.",
-  },
-];
-
 const seoOffers = [
   {
-    price: "À partir de 150€ HT",
+    price: "150€ HT",
     title: "Optimisation SEO de base",
-    text: "Titres, descriptions, structure H1/H2, textes, liens internes et corrections simples pour améliorer la compréhension Google.",
+    text: "Titres, descriptions, H1/H2, liens internes et corrections simples pour mieux comprendre votre page.",
   },
   {
-    price: "À partir de 250€ HT",
+    price: "250€ HT",
     title: "Page SEO locale",
-    text: "Création ou optimisation d’une page ciblée : Rouen, Normandie, Caen, Le Havre, Évreux ou France.",
+    text: "Création ou amélioration d'une page ciblée Rouen, Caen, Le Havre, Évreux ou Normandie.",
   },
   {
-    price: "À partir de 300€ HT",
-    title: "Optimisation Google Business",
-    text: "Aide à l’optimisation de votre fiche : description, services, photos, mots-clés locaux et conseils avis clients.",
+    price: "300€ HT",
+    title: "Google Business Profile",
+    text: "Optimisation de description, services, photos, mots-clés locaux et conseils pour obtenir plus d'avis.",
   },
 ];
 
-const automationOffers = [
+const premiumOffers = [
   {
-    price: "À partir de 150€ HT",
-    title: "Formulaire de contact optimisé",
-    text: "Mise en place ou amélioration d’un formulaire clair pour recevoir des demandes propres et exploitables.",
+    title: "Cadrage d'outil métier",
+    text: "Clarification des utilisateurs, problèmes à résoudre, données utiles, écrans nécessaires et première version réaliste.",
   },
   {
-    price: "À partir de 200€ HT",
-    title: "Boutons d’action intelligents",
-    text: "Ajout de boutons WhatsApp, appel, email, demande de devis ou redirection stratégique selon votre activité.",
+    title: "Tableau de pilotage business",
+    text: "Interface pour suivre vos clients, commandes, projets, ventes, tâches ou priorités depuis un seul endroit.",
   },
   {
-    price: "À partir de 250€ HT",
-    title: "Automatisation simple",
-    text: "Petite automatisation adaptée : email automatique, redirection de demande, collecte d’informations ou workflow simple.",
+    title: "Automatisation ciblée",
+    text: "Réduction des tâches répétitives : tri de demandes, résumés, reporting, suivi de formulaire ou préparation de réponse.",
   },
 ];
 
-const maintenanceOffers = [
-  {
-    price: "29€ HT/mois ou 290€ HT/an",
-    title: "Maintenance Essentielle",
-    text: "Surveillance simple, petites corrections ponctuelles et vérification générale du bon fonctionnement du site.",
-  },
-  {
-    price: "59€ HT/mois ou 590€ HT/an",
-    title: "Maintenance Pro",
-    text: "Maintenance, petites évolutions, ajustements de contenu, suivi SEO simple et accompagnement régulier.",
-  },
-  {
-    price: "99€ HT/mois ou 990€ HT/an",
-    title: "Suivi Business",
-    text: "Suivi plus complet : amélioration continue, conseils, optimisation conversion, SEO et accompagnement digital.",
-  },
-];
-
-const included = [
-  "Design responsive mobile, tablette et ordinateur selon l’offre choisie",
-  "Structure claire adaptée à votre activité",
-  "Sections orientées conversion",
-  "SEO de base pour aider Google à comprendre votre site",
-  "Formulaire, bouton ou page de contact selon le besoin",
-  "Mise en ligne et accompagnement simple",
-  "Conseils pour améliorer votre présence en ligne",
-  "Base professionnelle exploitable et évolutive",
-];
-
-const limits = [
-  "Les prix sont indicatifs et dépendent de l’état du site existant.",
-  "Une intervention à 50€ concerne un élément simple, pas une refonte complète.",
-  "Le responsive est respecté autant que possible selon la structure déjà en place.",
-  "Les projets plus complexes nécessitent un devis personnalisé.",
-];
-
-const steps = [
-  {
-    num: "1",
-    title: "On échange",
-    description:
-      "Vous m’expliquez votre besoin, votre situation actuelle, votre budget et votre objectif.",
-  },
-  {
-    num: "2",
-    title: "Je vous oriente",
-    description:
-      "Je vous propose l’offre la plus cohérente : petite intervention, site, SEO, automatisation ou maintenance.",
-  },
-  {
-    num: "3",
-    title: "On avance proprement",
-    description:
-      "Je réalise le travail avec une approche claire, responsive, structurée et orientée résultat.",
-  },
-];
-
-const faq = [
-  {
-    question: "Est-ce que je peux commencer avec une petite intervention ?",
-    answer:
-      "Oui. Les offres à 50€ ou 100€ sont justement prévues pour corriger ou améliorer un élément simple avant d’aller plus loin.",
-  },
-  {
-    question: "Est-ce que le site sera responsive ?",
-    answer:
-      "Oui, l’objectif est d’avoir un rendu adapté mobile, tablette et ordinateur. Pour un site existant, cela dépend aussi de sa structure actuelle.",
-  },
-  {
-    question: "Est-ce que vous travaillez à distance ?",
-    answer:
-      "Oui. Les échanges peuvent se faire par téléphone, email, visio ou message, partout en France.",
-  },
-  {
-    question: "Est-ce que je peux demander un devis avant de commencer ?",
-    answer:
-      "Oui. Le devis permet de cadrer clairement le besoin, le budget et le niveau d’intervention nécessaire.",
-  },
-];
+const sentinelOffer = portfolioProjects.find((project) => project.slug === "devora-sentinel");
 
 export default function OffrePage() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
-      <section className="relative overflow-hidden px-6 py-24 text-center">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E7EEFF] opacity-50 blur-3xl" />
-          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] opacity-60 blur-3xl" />
-        </div>
-
-        <div className="mx-auto max-w-6xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
-            Offres DevOra
-          </span>
-
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
-            Des offres web adaptées à votre besoin
-            <br />
-            <span className="bg-linear-to-r from-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              du dépannage au projet complet
-            </span>
-          </h1>
-
-          <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
-            Commencer petit, avancer proprement, investir au bon moment
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#334155]">
-            Vous avez besoin d’un site internet, d’une correction, d’une page SEO,
-            d’une automatisation simple ou d’un suivi régulier ? Je vous propose
-            des solutions progressives, claires et adaptées à votre budget.
+    <main className="devora-page devora-immersive-page min-h-screen">
+      <section className="devora-dark-section relative overflow-hidden px-6 py-20 text-white">
+        <CodeAtmosphere />
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#22D3EE]">
+            Offres DEVORA
           </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
+          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+            Des offres lisibles pour avancer sans jargon et sans flou.
+          </h1>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/72">
+            Commencez par une correction, une page de vente ou un site starter.
+            Pour un outil métier, un tableau de pilotage, une automatisation ou
+            Sentinel, DEVORA cadre d&apos;abord une version utile avant de chiffrer.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {reassuranceBadges.map((badge) => (
+              <span key={badge} className="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-xs font-semibold text-white/78 shadow-sm">
+                {badge}
+              </span>
+            ))}
+          </div>
+          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <TrackedLink
               href="/contact"
-              className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 text-center font-semibold text-white shadow-lg transition hover:brightness-110 sm:w-auto"
+              eventName="cta_offers_hero_contact"
+              eventLabel="Offres devis"
+              className="rounded-full bg-linear-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] px-8 py-4 text-center font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition hover:brightness-110"
             >
-              Demander un devis gratuit
-            </Link>
-
+              Demander un cadrage
+            </TrackedLink>
             <Link
               href="/simulateur"
-              className="w-full rounded-full bg-[#EFF9F8] px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#DDF8F5] sm:w-auto"
+              className="rounded-full border border-white/20 bg-white/8 px-8 py-4 text-center font-semibold text-white transition hover:bg-white/12"
             >
-              Estimer mon projet en ligne
-            </Link>
-
-            <Link
-              href="#interventions"
-              className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
-            >
-              Voir les offres
+              Estimer mon projet
             </Link>
           </div>
         </div>
       </section>
 
-      <section id="interventions" className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Petites interventions
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">
-              Une porte d’entrée simple dès 50€
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-              Idéal pour corriger un détail, améliorer un élément ou tester une
-              première collaboration sans engager un gros budget.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {quickOffers.map((offer) => (
-              <div key={offer.title} className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {offer.price}
-                </p>
-                <h3 className="mt-4 text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#475569]">{offer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Création de site internet
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">
-              Des solutions évolutives selon votre projet
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {creationOffers.map((offer) => (
-              <div key={offer.title} className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {offer.price}
-                </p>
-                <h3 className="mt-4 text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#475569]">{offer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              SEO et visibilité
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">
-              Être visible ne doit pas être laissé au hasard
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {seoOffers.map((offer) => (
-              <div key={offer.title} className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {offer.price}
-                </p>
-                <h3 className="mt-4 text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#475569]">{offer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Automatisations simples
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">
-              Gagner du temps avec des actions simples
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-              Je reste sur des automatisations cohérentes et maîtrisées :
-              formulaires, boutons, redirections, emails ou petits workflows simples.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {automationOffers.map((offer) => (
-              <div key={offer.title} className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {offer.price}
-                </p>
-                <h3 className="mt-4 text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#475569]">{offer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Suivi annuel
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent md:text-4xl">
-              Votre site doit rester propre après sa mise en ligne
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {maintenanceOffers.map((offer) => (
-              <div key={offer.title} className="rounded-4xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {offer.price}
-                </p>
-                <h3 className="mt-4 text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#475569]">{offer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl rounded-4xl border border-[#061A35]/10 bg-white p-10 shadow-sm md:p-14">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Inclus selon l’offre
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Une base professionnelle claire et exploitable
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {included.map((item) => (
-              <div key={item} className="rounded-2xl bg-[#F4FAFC] p-5 text-[#334155]">
-                <span className="font-semibold text-[#173C91]">✓ </span>
-                {item}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 rounded-3xl bg-[#EFF9F8] p-6">
-            <p className="font-semibold text-[#061A35]">Important :</p>
-            <ul className="mt-4 space-y-2 text-[#475569]">
-              {limits.map((limit) => (
-                <li key={limit}>• {limit}</li>
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm md:p-12">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+                Projets premium
+              </p>
+              <h2 className="mt-3 text-3xl font-bold text-white">
+                Pour les besoins plus avancés : outil métier, IA utile ou e-commerce.
+              </h2>
+              <p className="mt-4 leading-8 text-white/70">
+                Ces projets dépendent du périmètre, des données disponibles et du
+                gain recherché. Le bon départ : cadrer une première version utile,
+                compréhensible et réaliste.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {premiumOffers.map((offer) => (
+                <article key={offer.title} className="rounded-2xl bg-white/[0.07] p-5">
+                  <h3 className="font-bold text-white">{offer.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/58">
+                    {offer.text}
+                  </p>
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl rounded-4xl border border-[#061A35]/10 bg-white p-10 text-center shadow-sm md:p-14">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-            Crédibilité
-          </p>
-          <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Une approche structurée et professionnelle
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl leading-8 text-[#475569]">
-            Développeur web formé et certifié RNCP niveau 5, je m’appuie sur une
-            méthode de travail claire : analyse du besoin, structure responsive,
-            SEO de base, sécurité, mise en ligne et accompagnement.
-          </p>
+      {sentinelOffer ? (
+        <section className="px-6 pb-20">
+          <div className="devora-dark-section mx-auto grid max-w-6xl gap-8 rounded-4xl p-8 text-white shadow-2xl shadow-[#061A35]/25 md:p-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#22D3EE]">
+                Offre produit
+              </p>
+              <h2 className="mt-4 text-3xl font-extrabold md:text-4xl">
+                DEVORA Sentinel Early Access
+              </h2>
+              <p className="mt-5 leading-8 text-white/75">
+                Accès privé limité à 50 personnes, avec 1 mois inclus. Sentinel
+                aide à mieux lire des alertes locales et reste activé manuellement
+                pour garder un lancement maîtrisé. Une version téléphone portable
+                est en cours de développement.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <TrackedLink
+                  href={sentinelOffer.launchOffer?.href ?? "/portfolio/devora-sentinel#early-access"}
+                  eventName="cta_offers_sentinel_early_access"
+                  eventLabel="Offre Sentinel Early Access"
+                  className="rounded-full bg-linear-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] px-7 py-4 text-center font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition hover:brightness-110"
+                >
+                  Rejoindre l&apos;Early Access
+                </TrackedLink>
+                <Link
+                  href="/portfolio/devora-sentinel"
+                  className="rounded-full border border-white/20 bg-white/8 px-7 py-4 text-center font-semibold text-white transition hover:bg-white/12"
+                >
+                  Voir DEVORA Sentinel
+                </Link>
+              </div>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {sentinelOffer.pricing?.slice(0, 2).map((pack) => (
+                <article key={pack.name} className="rounded-3xl border border-white/10 bg-white/8 p-6">
+                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#67E8F9]">
+                    {pack.name}
+                  </p>
+                  <p className="mt-3 text-3xl font-black">{pack.price}</p>
+                  <p className="mt-3 text-sm leading-6 text-white/68">
+                    {pack.description}
+                  </p>
+                  <div className="mt-5 grid gap-2">
+                    {pack.included.map((item) => (
+                      <span key={item} className="rounded-xl bg-white/8 px-3 py-2 text-sm font-semibold text-white/75">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {quickOffers.map((offer) => (
+              <article key={offer.title} className="rounded-4xl border border-white/12 bg-white/[0.075] p-7 shadow-sm">
+                <p className="text-3xl font-extrabold text-[#67E8F9]">
+                  {offer.price}
+                </p>
+                <h2 className="mt-3 text-2xl font-bold text-white">
+                  {offer.title}
+                </h2>
+                <p className="mt-4 leading-7 text-white/70">{offer.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl">
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Sites et pages
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Les offres principales.
+            </h2>
+          </div>
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            {creationOffers.map((offer) => (
+              <article
+                key={offer.title}
+                className={`rounded-4xl border bg-white/[0.075] p-7 shadow-sm ${
+                  offer.title.includes("starter")
+                    ? "border-[#2DBEB5] shadow-[#2DBEB5]/10"
+                    : "border-white/12"
+                }`}
+              >
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#67E8F9]">
+                  {offer.tag}
+                </p>
+                <h3 className="mt-3 text-2xl font-bold text-white">
+                  {offer.title}
+                </h3>
+                <p className="mt-2 text-3xl font-extrabold text-[#67E8F9]">
+                  {offer.price}
+                </p>
+                <p className="mt-4 leading-7 text-white/70">{offer.text}</p>
+                <ul className="mt-5 space-y-2 text-sm text-white/72">
+                  {offer.items.map((item) => (
+                    <li key={item}>✓ {item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
+          <div className="rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Visibilité locale
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Pour être plus clair aux yeux de Google et de vos clients.
+            </h2>
+            <div className="mt-7 grid gap-4">
+              {seoOffers.map((offer) => (
+                <div key={offer.title} className="rounded-2xl bg-white/[0.07] p-5">
+                  <p className="font-bold text-[#67E8F9]">{offer.price}</p>
+                  <h3 className="mt-1 font-semibold text-white">
+                    {offer.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-white/58">
+                    {offer.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Maintenance
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Une présence en ligne doit rester fiable.
+            </h2>
+            <div className="mt-7 grid gap-4">
+              {maintenanceOffers.map((offer) => (
+                <div key={offer.title} className="rounded-2xl bg-white/[0.07] p-5">
+                  <p className="font-bold text-[#67E8F9]">{offer.price}</p>
+                  <h3 className="mt-1 font-semibold text-white">
+                    {offer.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-white/58">
+                    {offer.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm md:p-12">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
               Déroulement
             </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Une méthode simple pour avancer sans confusion
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Une méthode simple avant de dépenser.
             </h2>
           </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {steps.map((step) => (
-              <div key={step.num} className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {processSteps.map((step) => (
+              <article key={step.num} className="rounded-3xl bg-white/[0.07] p-6">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
                   {step.num}
-                </div>
-                <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+                </span>
+                <h3 className="mt-4 text-xl font-bold text-white">
                   {step.title}
                 </h3>
-                <p className="mt-3 leading-7 text-[#475569]">{step.description}</p>
-              </div>
+                <p className="mt-3 leading-7 text-white/70">{step.text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-20">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Questions fréquentes
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              FAQ
             </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Avant de me contacter
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Questions avant de choisir.
             </h2>
           </div>
-
-          <div className="mt-10 space-y-4">
-            {faq.map((item) => (
-              <div key={item.question} className="rounded-3xl border border-[#061A35]/10 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#061A35]">{item.question}</h3>
-                <p className="mt-3 leading-7 text-[#475569]">{item.answer}</p>
-              </div>
+          <div className="mt-8 space-y-4">
+            {faqs.map((item) => (
+              <article key={item.question} className="rounded-3xl border border-white/12 bg-white/[0.075] p-6 shadow-sm">
+                <h3 className="font-bold text-white">{item.question}</h3>
+                <p className="mt-2 leading-7 text-white/70">{item.answer}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       <section className="px-6 pb-28">
-        <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Vous ne savez pas quelle offre choisir ?
+        <div className="mx-auto max-w-6xl rounded-4xl bg-[#061A35] p-8 text-center text-white md:p-12">
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Vous voulez savoir quoi choisir ?
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-            Expliquez-moi simplement votre besoin. Je vous dirai si une petite
-            intervention suffit ou s’il faut prévoir une solution plus complète.
+          <p className="mx-auto mt-4 max-w-3xl leading-8 text-white/75">
+            Envoyez votre situation. DEVORA répond avec l&apos;option la plus
+            cohérente : correction, page de vente, outil métier, automatisation ou démo privée.
           </p>
-
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <TrackedLink
               href="/contact"
-              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 font-semibold text-white shadow-sm transition hover:brightness-110"
+              eventName="cta_offers_final_contact"
+              eventLabel="Offres final"
+              className="rounded-full bg-linear-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] px-8 py-4 text-center font-semibold text-white transition hover:brightness-110"
             >
-              Demander mon devis gratuit
-            </Link>
-
-            <Link
-              href="/simulateur"
-              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 font-semibold text-white shadow-sm transition hover:brightness-110"
-            >
-              Estimer mon projet en ligne
-            </Link>  
-
+              Demander mon cadrage
+            </TrackedLink>
             <Link
               href="/services"
-              className="inline-flex rounded-full border border-[#173C91] bg-white px-8 py-4 font-semibold text-[#173C91] transition hover:bg-[#EFF9F8]"
+              className="rounded-full border border-white/30 px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10"
             >
-              Voir les services
+              Revoir les services
             </Link>
           </div>
         </div>

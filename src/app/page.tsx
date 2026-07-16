@@ -1,396 +1,291 @@
+import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import type { Metadata } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr";
-
-export const metadata: Metadata = {
-  title: "Création de site internet en Normandie DevOra",
-  description:
-    "Développeur web freelance en Normandie - DevOra. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
-  alternates: {
-    canonical: "/",
-  },
-};
+import CodeAtmosphere from "@/components/CodeAtmosphere";
+import { GsapAnimations } from "@/components/GsapAnimations";
+import PrivateProjectVeil from "@/components/PrivateProjectVeil";
+import { processSteps, services, siteUrl } from "@/data/site";
+import { portfolioProjects } from "@/lib/portfolio";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "DevOra",
+  name: "DEVORA",
   url: siteUrl,
-  email: "contact@devora-freelance.fr",
-  areaServed: ["Rouen", "Normandie"],
+  image: `${siteUrl}/assets/devora-logo.png`,
   description:
-    "Création de sites vitrines modernes, refonte de site et accompagnement digital.",
+    "Plateforme premium qui aide les entreprises à mieux présenter leur offre, suivre leurs priorités, automatiser les tâches répétitives et protéger certains outils internes.",
+  areaServed: "France",
+  slogan: "Des outils clairs pour vendre, piloter et gagner du temps.",
   serviceType: [
-    "Création de site vitrine",
-    "Refonte de site",
-    "Accompagnement digital",
+    "Sites et pages de conversion",
+    "Tableaux de pilotage métier",
+    "Automatisation business",
+    "Outils internes privés",
+    "Surveillance défensive locale",
   ],
+  sameAs: [siteUrl],
 };
 
-const features = [
-  {
-    title: "Rapide",
-    description:
-      "Des sites optimisés pour la performance, le confort de navigation et une meilleure visibilité.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
-  },
-  {
-    title: "Moderne",
-    description:
-      "Un design clair, responsive et professionnel pour inspirer confiance dès les premières secondes.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`,
-  },
-  {
-    title: "Efficace",
-    description:
-      "Une structure pensée pour guider vos visiteurs et faciliter la prise de contact.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
-  },
-];
-
-const values = [
-  {
-    label: "Clarté",
-    description:
-      "Une présentation simple et lisible pour que vos visiteurs comprennent immédiatement ce que vous proposez.",
-  },
-  {
-    label: "Crédibilité",
-    description:
-      "Une image plus professionnelle pour rassurer vos prospects et renforcer votre présence en ligne.",
-  },
-  {
-    label: "Résultat",
-    description:
-      "Un site pensé pour soutenir votre activité et créer de vraies opportunités de contact.",
-  },
-];
-
-const steps = [
-  {
-    num: "1",
-    title: "Échange",
-    description:
-      "Nous clarifions vos besoins, vos objectifs et l'image que vous souhaitez transmettre.",
-  },
-  {
-    num: "2",
-    title: "Conception",
-    description:
-      "Je structure le site et conçois une interface moderne, lisible et adaptée à votre activité.",
-  },
-  {
-    num: "3",
-    title: "Mise en ligne",
-    description:
-      "Le site est finalisé, vérifié et prêt à être présenté à vos futurs clients.",
-  },
-];
-
-const IconRapide = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-  </svg>
-);
-
-const IconModerne = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-    <rect x="3" y="3" width="18" height="18" rx="4" />
-    <path d="M9 9h6M9 12h6M9 15h4" />
-  </svg>
-);
-
-const IconEfficace = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2DBEB5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-    <polyline points="16 7 22 7 22 13" />
-  </svg>
-);
-
-const featureIcons = [<IconRapide key="rapide" />, <IconModerne key="moderne" />, <IconEfficace key="efficace" />];
-
-const reassuranceBadges = [
-  "Réponse sous 24 à 48h ouvrées",
-  "Devis gratuit",
-  "Sans engagement",
-  "Paiement sécurisé possible via Malt",
-];
-
-// Témoignages clients (à personnaliser avec des avis réels pour renforcer la preuve sociale).
-// const testimonials = [
-//   {
-//     name: "Jean Dupont",
-//     function: "Artisan boulanger",
-//     message:
-//       "DevOra a réalisé notre site rapidement et de manière professionnelle. Nos ventes ont augmenté et nos clients nous trouvent plus facilement.",
-//   },
-//   {
-//     name: "Sophie Martin",
-//     function: "Coach bien-être",
-//     message:
-//       "Je recommande DevOra pour son écoute et la clarté de ses propositions. Mon site est beau et me permet de recevoir des demandes régulières.",
-//   },
-//   {
-//     name: "Michel Leroy",
-//     function: "Entrepreneur local",
-//     message:
-//       "Grâce au site réalisé par DevOra, j'ai gagné en crédibilité auprès de mes prospects et je reçois des devis chaque semaine.",
-//   },
-// ];
+const featuredPortfolioProjects = portfolioProjects.slice(0, 2);
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
-      <Script
-        id="devora-jsonld"
+    <>
+      <GsapAnimations />
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-28 text-center">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E7EEFF] blur-3xl opacity-50" />
-          <div className="absolute bottom-0 right-10 h-56 w-56 rounded-full bg-[#DDF8F5] blur-3xl opacity-60" />
-        </div>
-
-        <div className="mx-auto max-w-6xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#C9D7FF] bg-white/80 px-4 py-2 text-sm font-medium text-[#173C91]">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-3.5 w-3.5">
-              <circle cx="8" cy="8" r="6" />
-              <path d="M8 5v3l2 2" strokeLinecap="round" />
-            </svg>
-            <span>Développeur web freelance en Normandie</span>
-            <span className="text-[#94A3B8]">DevOra</span>
-          </span>
-
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
-           Développeur web freelance en Normandie
-          </h1>
-            <h2 className="mt-4 text-2xl font-semibold text-[#173C91] md:text-3xl">
-              Je crée des sites internet qui génèrent des demandes de clients
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#475569] md:text-xl">
-              Basé à Rouen, j’accompagne en Normandie et partout en France, en présentiel ou à distance.
-            </p>
-
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#334155]">
-              Vous n’avez pas de site ou il ne vous apporte aucun client ?
-              Je crée des sites clairs, rapides et pensés pour générer des demandes.
-            </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
-              <Link
-                href="/contact"
-                className="w-full rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm text-center font-semibold text-white transition hover:brightness-110 sm:w-auto"
-              >
-                Je veux mon devis gratuit
-              </Link>
-
-              <Link
-                href="/simulateur"
-                className="w-full rounded-full bg-[#EFF9F8] px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#DDF8F5] sm:w-auto"
-              >
-                Estimer mon projet en 30 secondes
-              </Link>
-
-              <Link
-                href="/services"
-                className="w-full rounded-full border border-[#173C91] bg-white px-8 py-4 text-center font-semibold text-[#173C91] transition hover:bg-[#EFF9F8] sm:w-auto"
-              >
-                Voir mes services
-              </Link>
-          </div>
-
-          {/* Badges de réassurance */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            {reassuranceBadges.map((badge) => (
-              <span
-                key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF9F8] px-3 py-1.5 text-xs font-medium text-[#173C91]"
-              >
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#173C91]" />
-                {badge}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INTRODUCTION SEO */}
-      <section className="px-6 pb-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Création de site internet en Normandie
-          </h2>
-          <p className="mt-4 text-[#475569] leading-8">
-            Vous recherchez un développeur web freelance en Normandie pour créer votre site internet ?
-            J&apos;accompagne les entreprises, artisans et indépendants à Rouen et dans la région dans la création,
-            la refonte et l&apos;optimisation de leur présence en ligne.
-          </p>
-        </div>
-      </section>
-
-      {/* FEATURES */}
-      <section className="px-6 pb-24">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          {features.map((feature, i) => (
-            <div
-              key={feature.title}
-              className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md hover:border-[#2DBEB5]/30"
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EFF9F8]">
-                {featureIcons[i]}
+      <div className="site-shell">
+        <main id="accueil">
+          <section className="hero-section">
+            <CodeAtmosphere />
+            <div className="hero-content" data-reveal>
+              <p className="eyebrow">Plateforme business, IA utile et outils privés</p>
+              <h1>DEVORA crée des outils clairs pour vendre mieux, suivre vos priorités et gagner du temps.</h1>
+              <p className="hero-lead">
+                DEVORA aide les indépendants, commerces, TPE, PME et projets tech à transformer
+                leurs idées en interfaces utiles : pages de vente, tableaux de pilotage,
+                automatisations, outils internes et DEVORA Sentinel pour surveiller des signaux
+                sensibles sans tout exposer publiquement.
+              </p>
+              <div className="hero-actions">
+                <Link href="/contact" className="primary-cta" data-magnetic>
+                  Demander un cadrage
+                </Link>
+                <Link href="/portfolio" className="secondary-cta">
+                  Voir les projets
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">{feature.title}</h3>
-              <p className="mt-3 leading-7 text-[#475569]">{feature.description}</p>
+              <div className="trust-strip" aria-label="Domaines d'intervention DEVORA">
+                <span>Sites premium</span>
+                <span>DEVORA Sentinel</span>
+                <span>IA locale utile</span>
+                <span>Tableaux métier</span>
+                <span>Gain de temps</span>
+              </div>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* POURQUOI DEVORA */}
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl rounded-4xl border border-[#061A35]/10 bg-white p-10 shadow-sm md:p-14">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Pourquoi DevOra
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Pourquoi travailler avec DevOra ?
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-              Mon objectif n&apos;est pas simplement de créer un joli site, mais de
-              concevoir un outil utile, rassurant et cohérent avec votre activité.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.label} className="rounded-2xl bg-[#F4FAFC] p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                  {value.label}
-                </p>
-                <p className="mt-3 leading-7 text-[#334155]">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MÉTHODE EN 3 ÉTAPES */}
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-5xl">
-          <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Ma méthode
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Un accompagnement simple et efficace
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-[#475569] leading-8">
-              De la conception à la mise en ligne, je vous accompagne à chaque étape
-              pour créer un site qui correspond réellement à vos objectifs.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {steps.map((step) => (
-              <div
-                key={step.num}
-                className="rounded-3xl border border-[#061A35]/10 bg-white p-8 shadow-sm"
-              >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
-                  {step.num}
+            <div className="hero-visual" data-reveal data-float>
+              <Image
+                src="/assets/devora-logo.png"
+                alt="Logo DEVORA, identité premium bleu cyan violet magenta"
+                width={900}
+                height={600}
+                priority
+                className="hero-logo"
+              />
+              <div className="hero-dashboard" aria-hidden="true">
+                <div>
+                  <span>Conversion</span>
+                  <strong>+31%</strong>
                 </div>
-                <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">{step.title}</h3>
-                <p className="mt-3 leading-7 text-[#475569]">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TÉMOIGNAGES */}
-      {/* <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Témoignages
-            </p>
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Ils me font confiance
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-              Voici quelques retours de clients satisfaits. Ces témoignages authentiques renforcent la preuve sociale et rassurent vos futurs prospects.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div key={t.name} className="flex flex-col rounded-3xl border border-[#061A35]/10 bg-white p-6 shadow-sm">
-                <div className="mb-4">
-                  <svg viewBox="0 0 24 24" fill="#2DBEB5" className="h-6 w-6">
-                    <path d="M12 .587l3.668 7.431 8.215 1.192-5.941 5.788 1.404 8.201L12 18.901l-7.346 3.866 1.404-8.201L.117 9.21l8.215-1.192z" />
-                  </svg>
+                <div>
+                  <span>Tâches gagnées</span>
+                  <strong>18</strong>
                 </div>
-                <p className="mb-6 text-[#334155] leading-7">
-                  “{t.message}”
-                </p>
-                <div className="mt-auto">
-                  <p className="font-semibold text-[#061A35]">{t.name}</p>
-                  <p className="text-sm text-[#64748B]">{t.function}</p>
+                <div>
+                  <span>Score UX/SEO</span>
+                  <strong>96</strong>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>  */}
+            </div>
+          </section>
 
-      {/* CTA FINAL */}
-      <section className="px-6 pb-28">
-        <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Un projet de site internet ?
-          </h2>
+          <section className="section positioning-grid" aria-label="Positionnement DEVORA" data-reveal>
+            <article className="positioning-card">
+              <p className="eyebrow">Positionnement</p>
+              <h2>Une vitrine claire en public, des démonstrations détaillées en privé.</h2>
+              <p>
+                Le site présente les bénéfices, des captures choisies et des cas d&apos;usage compréhensibles.
+                Les détails sensibles restent réservés aux rendez-vous pour garder un discours crédible,
+                sûr et adapté aux produits DEVORA.
+              </p>
+            </article>
+            <article className="positioning-card">
+              <p className="eyebrow">IA locale</p>
+              <h2>Une IA pensée pour aider le métier, pas pour faire de la magie.</h2>
+              <p>
+                DEVORA explore des assistants capables d&apos;aider à trier des demandes, préparer des réponses,
+                suivre des priorités ou analyser des informations, avec une logique utile, maîtrisée et
+                respectueuse des données.
+              </p>
+            </article>
+          </section>
 
-          <p className="mx-auto mt-4 max-w-3xl leading-8 text-[#475569]">
-            Discutons ensemble de votre activité, de vos besoins et de la
-            meilleure façon de construire une présence en ligne moderne et efficace.
-          </p>
+          <section className="section" id="expertises" aria-labelledby="expertises-title">
+            <div className="section-heading" data-reveal>
+              <p className="eyebrow">Solutions</p>
+              <h2 id="expertises-title">Des solutions conçues pour résoudre un problème concret.</h2>
+              <p>
+                Chaque projet doit répondre à une question simple : qu&apos;est-ce que le client comprend
+                mieux, fait plus vite ou pilote plus facilement après la mise en place ?
+              </p>
+            </div>
+            <div className="service-grid">
+              {services.map((service) => (
+                <article className="service-card" key={service.title} data-reveal>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <ul>
+                    {service.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="inline-flex rounded-full bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] px-8 py-4 shadow-sm font-semibold text-white transition hover:brightness-110"
-            >
-              Je veux mon devis gratuit
-            </Link>
+          <section className="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+            <div className="section-heading" data-reveal>
+              <p className="eyebrow">Projets DEVORA</p>
+              <h2 id="portfolio-title">Des exemples concrets, montrés sans dévoiler les parties sensibles.</h2>
+              <p>
+                Certaines interfaces sont visibles, d&apos;autres restent volontairement partielles. Ce choix
+                protège les outils internes, tout en montrant clairement le problème traité et le bénéfice
+                pour l&apos;utilisateur.
+              </p>
+            </div>
+            <div className="project-grid">
+              {featuredPortfolioProjects.map((project) => (
+                <article className="project-card" key={project.slug} data-project-card>
+                  <div className="project-real-shot">
+                    {project.screenshots?.[0] ? (
+                      <Image
+                        src={project.screenshots[0].src}
+                        alt={project.screenshots[0].alt}
+                        width={1440}
+                        height={1000}
+                        className="project-real-shot-img"
+                      />
+                    ) : (
+                      <PrivateProjectVeil
+                        title="Produit interne protégé"
+                        description="Aperçu volontairement limité. La démonstration complète se fait en privé."
+                      />
+                    )}
+                  </div>
+                  <div className="project-body">
+                    <div className="project-kicker">
+                      <span>{project.type}</span>
+                      <span>{project.availability}</span>
+                    </div>
+                    <h3>{project.title}</h3>
+                    <p className="project-slogan">{project.positioning}</p>
+                    <p>{project.shortDescription}</p>
+                    <div className="business-use">
+                      <strong>Fonctions concrètes</strong>
+                      <span>{project.features.slice(0, 3).join(" · ")}</span>
+                    </div>
+                    {project.launchOffer ? (
+                      <div className="business-use sentinel-offer-card">
+                        <strong>{project.launchOffer.title}</strong>
+                        <span>{project.launchOffer.text}</span>
+                        <a className="primary-cta" href={project.launchOffer.href} data-magnetic>
+                          {project.launchOffer.cta}
+                        </a>
+                      </div>
+                    ) : null}
+                    <div className="tag-row" aria-label={`Repères projet ${project.title}`}>
+                      {project.services.slice(0, 4).map((service) => (
+                        <span key={service}>{service}</span>
+                      ))}
+                    </div>
+                    <div className="project-actions">
+                      <a className="secondary-cta" href={`/portfolio/${project.slug}`}>
+                        Voir l&apos;étude de cas
+                      </a>
+                      <Link className="secondary-cta" href="/contact">
+                        Demander un cadrage
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="portfolio-more" data-reveal>
+              <Link href="/portfolio" className="primary-cta">
+                Voir tout le portfolio
+              </Link>
+              <Link href="/simulateur" className="secondary-cta">
+                Préqualifier mon besoin
+              </Link>
+            </div>
+          </section>
 
-            <Link
-              href="/portfolio"
-              className="inline-flex rounded-full border border-[#173C91] bg-white px-8 py-4 font-semibold text-[#173C91] transition hover:bg-[#EFF9F8]"
-            >
-              Voir mes réalisations
-            </Link>
-          </div>
+          <section className="section proof-section" aria-labelledby="credibilite-title">
+            <div className="proof-copy" data-reveal>
+              <p className="eyebrow">Crédibilité</p>
+              <h2 id="credibilite-title">Une présence premium, mais surtout utile au business.</h2>
+              <p>
+                Le design donne confiance, les textes expliquent clairement, les boutons facilitent le
+                contact et les pages aident Google à comprendre l&apos;activité. Rien n&apos;est là uniquement
+                pour faire joli.
+              </p>
+            </div>
+            <div className="proof-metrics" data-reveal>
+              <div>
+                <strong>SEO</strong>
+                <span>Pages structurées, titres clairs, descriptions utiles et maillage interne.</span>
+              </div>
+              <div>
+                <strong>UX</strong>
+                <span>Sections lisibles, boutons visibles et parcours simple sur mobile comme sur desktop.</span>
+              </div>
+              <div>
+                <strong>Business</strong>
+                <span>Solutions pensées pour gagner du temps, rassurer et prioriser les bonnes actions.</span>
+              </div>
+            </div>
+          </section>
 
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            {reassuranceBadges.map((badge) => (
-              <span
-                key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#EFF9F8] px-3 py-1.5 text-xs font-medium text-[#173C91]"
-              >
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#173C91]" />
-                {badge}
-              </span>
-            ))}
-          </div> 
+          <section className="section" id="methode" aria-labelledby="methode-title">
+            <div className="section-heading" data-reveal>
+              <p className="eyebrow">Méthode</p>
+              <h2 id="methode-title">Un processus lisible, du besoin à la mise en ligne.</h2>
+            </div>
+            <div className="process-grid">
+              {processSteps.map((item) => (
+                <article className="process-step" key={item.step} data-reveal>
+                  <span>{item.step}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <i data-pulse-line />
+                </article>
+              ))}
+            </div>
+          </section>
 
-        </div>
-      </section>
-    </main>
+          <section
+            className="section contact-section home-final-cta"
+            id="contact"
+            aria-labelledby="contact-title"
+            data-reveal
+          >
+            <div>
+              <p className="eyebrow">Contact</p>
+              <h2 id="contact-title">Vous avez un besoin à clarifier ou un outil à construire ?</h2>
+              <p>
+                DEVORA peut vous aider à créer une page qui vend, un espace de suivi, une automatisation,
+                un outil métier ou une demande d&apos;accès Sentinel. Le premier échange sert à comprendre
+                le problème et choisir la solution la plus utile.
+              </p>
+            </div>
+            <div className="contact-panel">
+              <span>Réponse orientée décision</span>
+              <Link className="primary-cta" href="/contact" data-magnetic>
+                Demander un cadrage
+              </Link>
+              <a className="secondary-cta" href="mailto:contact@devora-freelance.fr">
+                contact@devora-freelance.fr
+              </a>
+              <p>Expliquez le contexte, l&apos;objectif et les blocages. DEVORA répond avec une orientation claire.</p>
+            </div>
+          </section>
+        </main>
+
+      </div>
+    </>
   );
 }

@@ -1,103 +1,109 @@
 import type { Metadata } from "next";
+import CodeAtmosphere from "@/components/CodeAtmosphere";
 
 export const metadata: Metadata = {
-  title: "Mentions légales - DevOra",
+  title: "Mentions légales - DEVORA",
   description:
-    "Mentions légales du site DevOra, exploité par HarmoniaWear.",
+    "Mentions légales du site DEVORA, exploité par HarmoniaWear.",
   alternates: {
     canonical: "/mentions-legales",
   },
   openGraph: {
-    title: "Mentions légales - DevOra",
-    description: "Informations légales relatives au site DevOra.",
+    title: "Mentions légales - DEVORA",
+    description: "Informations légales relatives au site DEVORA.",
     url: "/mentions-legales",
   },
 };
 
 export default function MentionsLegales() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
+    <main className="devora-page devora-immersive-page min-h-screen">
       {/* HERO */}
-      <section className="px-6 py-20 text-center">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
+      <section className="devora-dark-section relative overflow-hidden px-6 py-20 text-center text-white">
+        <CodeAtmosphere />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute left-[12%] top-12 h-64 w-64 rounded-full bg-[#2563EB] blur-3xl" />
+          <div className="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-[#22D3EE] blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#22D3EE]">
             Informations légales
           </p>
 
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
+          <h1 className="mx-auto mt-7 max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
             Mentions légales
           </h1>
 
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/74">
             Retrouvez ici les informations légales relatives à l’édition et à
-            l’exploitation du site DevOra.
+            l’exploitation du site DEVORA.
           </p>
         </div>
       </section>
 
       {/* CONTENU */}
-      <section className="px-6 pb-24">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl space-y-8">
+          <section className="bg-white/[0.075] rounded-3xl border border-white/12 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-extrabold text-white">
               Éditeur du site
             </h2>
 
-            <p className="mt-6 text-[#475569] leading-8">
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Nom commercial :</strong> DevOra
+            <p className="mt-6 text-white/70 leading-8">
+              <strong className="text-[#67E8F9]">Nom commercial :</strong> DEVORA
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Société exploitante :</strong> HarmoniaWear
+              <strong className="text-[#67E8F9]">Société exploitante :</strong> HarmoniaWear
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Forme juridique :</strong> SAS
+              <strong className="text-[#67E8F9]">Forme juridique :</strong> SAS
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Siège social :</strong> 6 RUE D&apos;ARMAILLE, 75017 PARIS
+              <strong className="text-[#67E8F9]">Siège social :</strong> 6 RUE D&apos;ARMAILLE, 75017 PARIS
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Numéro SIREN :</strong> 943643353
+              <strong className="text-[#67E8F9]">Numéro SIREN :</strong> 943643353
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Numéro SIRET :</strong> 94364335300015
+              <strong className="text-[#67E8F9]">Numéro SIRET :</strong> 94364335300015
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">TVA intracommunautaire :</strong> FR09943643353
+              <strong className="text-[#67E8F9]">TVA intracommunautaire :</strong> FR09943643353
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Email :</strong> contact@devora-freelance.fr
+              <strong className="text-[#67E8F9]">Email :</strong> contact@devora-freelance.fr
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+          <section className="bg-white/[0.075] rounded-3xl border border-white/12 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-extrabold text-white">
               Directeur de la publication
             </h2>
 
-            <p className="mt-6 text-[#475569] leading-8">
+            <p className="mt-6 text-white/70 leading-8">
               Aziz Ayyad
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+          <section className="bg-white/[0.075] rounded-3xl border border-white/12 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-extrabold text-white">
               Hébergement
             </h2>
 
-            <p className="mt-6 text-[#475569] leading-8">
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Hébergeur :</strong> Vercel Inc.
+            <p className="mt-6 text-white/70 leading-8">
+              <strong className="text-[#67E8F9]">Hébergeur :</strong> Vercel Inc.
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Site édité :</strong>{" "}https://devora-freelance.fr
+              <strong className="text-[#67E8F9]">Site édité :</strong>{" "}https://devora-freelance.fr
               <br />
-              <strong className="bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Site web :</strong> https://vercel.com
+              <strong className="text-[#67E8F9]">Site web :</strong> https://vercel.com
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+          <section className="bg-white/[0.075] rounded-3xl border border-white/12 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-extrabold text-white">
               Propriété intellectuelle
             </h2>
 
-            <p className="mt-6 text-[#475569] leading-8">
+            <p className="mt-6 text-white/70 leading-8">
               L’ensemble du contenu présent sur ce site, notamment les textes,
               visuels, éléments graphiques, logo, structure et mise en page, est
               protégé par le droit de la propriété intellectuelle.
             </p>
 
-            <p className="mt-4 text-[#475569] leading-8">
+            <p className="mt-4 text-white/70 leading-8">
               Toute reproduction, représentation, modification, publication ou
               adaptation, totale ou partielle, de tout ou partie du site, quel
               que soit le moyen ou le procédé utilisé, est interdite sans
@@ -105,12 +111,12 @@ export default function MentionsLegales() {
             </p>
           </section>
 
-          <section className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 md:p-10">
-            <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
+          <section className="bg-white/[0.075] rounded-3xl border border-white/12 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-extrabold text-white">
               Responsabilité
             </h2>
 
-            <p className="mt-6 text-[#475569] leading-8">
+            <p className="mt-6 text-white/70 leading-8">
               Les informations diffusées sur ce site sont fournies à titre
               informatif. Malgré le soin apporté à leur rédaction et à leur mise
               à jour, l’éditeur ne peut garantir l’exactitude, l’exhaustivité ou

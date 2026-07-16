@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import QuoteSimulator from "./QuoteSimulator";
 
 export const metadata: Metadata = {
-  title: "Simulateur de devis site web | DevOra",
+  title: "Simulateur DEVORA - trouver la bonne solution pour votre besoin",
   description:
-    "Estimez le prix de votre projet web en quelques secondes : site vitrine, landing page, SEO, maintenance ou projet sur mesure.",
+    "Préqualifiez votre besoin DEVORA : site, page de vente, outil métier, tableau de suivi, automatisation, e-commerce, Sentinel, SEO ou conversion.",
   alternates: {
     canonical: "/simulateur",
   },
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function SimulateurPage() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
+    <main className="devora-page devora-immersive-page min-h-screen">
       <QuoteSimulator />
     </main>
   );

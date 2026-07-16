@@ -1,333 +1,249 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CodeAtmosphere from "@/components/CodeAtmosphere";
+import TrackedLink from "@/components/TrackedLink";
+import {
+  creationOffers,
+  maintenanceOffers,
+  // processSteps,
+  quickOffers,
+  trustPillars,
+} from "@/lib/siteContent";
 
 export const metadata: Metadata = {
-  title: "Services de création de site vitrine en Normandie",
+  title: "Services DEVORA - sites, outils métier, IA utile et Sentinel",
   description:
-    "Création de site vitrine, refonte, landing page, maintenance et accompagnement digital pour artisans, indépendants et entreprises en Normandie.",
+    "Services DEVORA : sites premium, pages de vente, tableaux de pilotage, automatisations utiles, outils internes, e-commerce, Sentinel, SEO et conversion.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Services de création de site vitrine en Normandie | DevOra",
+    title: "Services sites, outils métier, IA utile et Sentinel | DEVORA",
     description:
-      "Site vitrine, refonte, landing page, maintenance et accompagnement digital en Normandie.",
+      "Sites premium, outils métier, automatisations utiles, e-commerce, Sentinel, SEO et maintenance avec un cadrage clair.",
     url: "/services",
   },
 };
 
-const prestations = [
+const deliverables = [
+  "Message clair pour expliquer l'offre",
+  "Design lisible sur mobile, tablette et desktop",
+  "Formulaire ou bouton de contact visible",
+  "Titres et descriptions compréhensibles pour Google",
+  "Mise en ligne accompagnée",
+  "Conseils après livraison pour continuer à avancer",
+];
+
+const customServices = [
   {
-    title: "Site vitrine professionnel",
-    price: "À partir de 800 € HT",
-    description:
-      "Un site clair, moderne et responsive pour présenter votre activité, vos services et faciliter la prise de contact.",
-    items: [
-      "Pages essentielles : accueil, services, à propos, contact",
-      "Design adapté mobile, tablette et ordinateur",
-      "Formulaire de contact fonctionnel",
-      "Base optimisée pour le référencement",
-    ],
+    title: "Site premium ou première version d'outil",
+    text: "Une base claire pour présenter une offre, tester une idée, remplacer un tableur ou lancer un outil métier simple.",
   },
   {
-    title: "Landing page",
-    price: "À partir de 300 € HT",
-    description:
-      "Une page unique pensée pour présenter une offre, générer des contacts ou promouvoir un service précis.",
-    items: [
-      "Structure orientée conversion",
-      "Message clair et direct",
-      "Boutons d’action visibles",
-      "Mise en page responsive",
-    ],
+    title: "Tableau de pilotage business",
+    text: "Une interface pour suivre vos clients, vos projets, vos ventes, vos commandes ou vos priorités au même endroit.",
   },
   {
-    title: "Refonte ou amélioration",
-    price: "À partir de 150 € HT",
-    description:
-      "Amélioration d’un site existant pour le rendre plus clair, plus moderne ou plus efficace.",
-    items: [
-      "Corrections visuelles",
-      "Amélioration de l’expérience utilisateur",
-      "Optimisation de sections existantes",
-      "Petits correctifs techniques",
-    ],
+    title: "Automatisation et IA utile",
+    text: "Des aides concrètes pour trier des demandes, préparer des réponses, générer un résumé ou réduire les tâches répétitives.",
   },
   {
-    title: "Fonctionnalités spécifiques",
-    price: "Sur devis",
-    description:
-      "Ajout de fonctionnalités adaptées à votre besoin : formulaire avancé, affichage dynamique, petite application web ou tableau de bord simple.",
-    items: [
-      "Analyse du besoin",
-      "Développement sur mesure",
-      "Connexion à une API ou une base de données",
-      "Tests et ajustements",
-    ],
-  },
-  {
-    title: "Maintenance et suivi",
-    price: "À partir de 50 € HT / mois",
-    description:
-      "Un accompagnement pour garder votre site propre, à jour et fonctionnel dans le temps.",
-    items: [
-      "Petites corrections",
-      "Mises à jour simples",
-      "Vérification du bon fonctionnement",
-      "Accompagnement ponctuel",
-    ],
-  },
-  {
-    title: "Application web sur mesure",
-    price: "À partir de 3 000 € HT",
-    description:
-      "Développement d’applications web complètes adaptées à vos besoins : interface utilisateur, API, base de données et logique métier.",
-    items: [
-      "Interface utilisateur moderne avec React",
-      "Développement back-end avec Node.js / Express",
-      "Création d’API",
-      "Base de données MySQL ou MongoDB",
-      "Authentification utilisateur",
-      "Structure évolutive et maintenable",
-    ],
-    details:
-      "Le délai et le tarif final sont définis après échange et analyse du besoin. Chaque projet étant différent, une estimation précise est proposée uniquement après validation du périmètre.",
+    title: "Sentinel et outils privés",
+    text: "Des interfaces protégées pour surveiller des signaux sensibles, prioriser des alertes et réserver les détails aux démonstrations privées.",
   },
 ];
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FBFDFF] via-[#F4FAFC] to-[#EFF9F8]">
-      <section className="px-6 py-20 text-center">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#173C91]">
-            Services
+    <main className="devora-page devora-immersive-page min-h-screen">
+      <section className="devora-dark-section relative overflow-hidden px-6 py-20 text-white">
+        <CodeAtmosphere />
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#22D3EE]">
+            Services DEVORA
           </p>
-
-          <h1 className="mt-8 text-5xl font-extrabold tracking-tight bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent sm:text-6xl md:text-7xl">
-            Des prestations claires pour développer votre présence en ligne
+          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+            Des services pour rendre votre activité plus claire, plus rapide et plus facile à piloter.
           </h1>
-
-          <p className="mt-6 text-lg text-[#475569] leading-8 max-w-3xl mx-auto">
-            Je vous accompagne dans la création, la refonte et l’amélioration de
-            votre site internet avec une approche simple, moderne et adaptée à
-            votre activité.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/72">
+            DEVORA accompagne les activités qui veulent mieux présenter leur offre,
+            suivre leurs demandes, gagner du temps sur les tâches répétitives ou
+            protéger certains outils internes derrière une démonstration privée.
           </p>
-        </div>
-      </section>
-
-      <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {prestations.map((prestation) => (
-            <article
-              key={prestation.title}
-              className={`bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8 hover:-translate-y-1 hover:shadow-md hover:border-[#2DBEB5]/30 transition ${
-                prestation.title === "Application web sur mesure" ? "lg:col-span-2" : ""
-              }`}
-            >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <h2 className="text-2xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                  {prestation.title}
-                </h2>
-
-                <p className="shrink-0 rounded-full bg-[#EFF9F8] px-4 py-2 text-sm font-semibold text-[#173C91]">
-                  {prestation.price}
-                </p>
-              </div>
-
-              <p className="mt-5 text-[#475569] leading-7">
-                {prestation.description}
-              </p>
-
-              <ul className="mt-6 space-y-3 text-sm text-[#334155]">
-                {prestation.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              {"details" in prestation && prestation.details && (
-                <div className="mt-6 rounded-2xl bg-[#F4FAFC] p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-                    Estimation après échange
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-[#475569]">
-                    {prestation.details}
-                  </p>
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
-
-        <div className="max-w-6xl mx-auto mt-10 rounded-3xl border border-[#061A35]/10 bg-white p-8 text-center shadow-sm">
-          <h2 className="text-2xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Des tarifs indicatifs, adaptés à votre projet
-          </h2>
-
-          <p className="mt-4 text-[#475569] leading-8">
-            Chaque projet est différent. Les tarifs affichés donnent une base de
-            départ, mais le prix final dépend du besoin, du nombre de pages, du
-            niveau de personnalisation et des fonctionnalités attendues.
-          </p>
-
-          <p className="mt-4 text-[#475569] leading-8">
-            Après un premier échange, je vous propose une solution claire, un
-            plan simple et un devis adapté.
-          </p>
-
-          {/* CTA */}
-          <div className="mt-8 flex justify-center">
-            <Link
+          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <TrackedLink
               href="/contact"
-              className="px-8 py-4 bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] text-white rounded-full shadow-sm hover:brightness-110 transition"
+              eventName="cta_services_hero_contact"
+              eventLabel="Services devis"
+              className="rounded-full bg-linear-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] px-8 py-4 text-center font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition hover:brightness-110"
             >
-              Demander un devis personnalisé
+              Expliquer mon besoin
+            </TrackedLink>
+            <Link
+              href="/offre"
+              className="rounded-full border border-white/20 bg-white/8 px-8 py-4 text-center font-semibold text-white transition hover:bg-white/12"
+            >
+              Voir les offres
             </Link>
           </div>
         </div>
       </section>
 
       <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">Pour qui ?</h2>
-            <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
-              Mes services s’adressent aux professionnels qui ont besoin d’un
-              site sérieux, clair et efficace pour mieux présenter leur activité.
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {customServices.map((service) => (
+              <article
+                key={service.title}
+                className="rounded-3xl border border-white/12 bg-white/[0.075] p-6 shadow-sm"
+              >
+                <h2 className="text-xl font-bold text-white">
+                  {service.title}
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-white/58">
+                  {service.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {creationOffers.map((offer) => (
+              <article
+                key={offer.title}
+                className="rounded-4xl border border-white/12 bg-white/[0.075] p-7 shadow-sm"
+              >
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#67E8F9]">
+                  {offer.tag}
+                </p>
+                <h2 className="mt-3 text-2xl font-bold text-white">
+                  {offer.title}
+                </h2>
+                <p className="mt-2 text-3xl font-extrabold text-[#67E8F9]">
+                  {offer.price}
+                </p>
+                <p className="mt-4 leading-7 text-white/70">{offer.text}</p>
+                <ul className="mt-5 space-y-2 text-sm text-white/72">
+                  {offer.items.map((item) => (
+                    <li key={item}>✓ {item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Inclus selon l&apos;offre
             </p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Une base exploitable, pas une simple page posée en ligne.
+            </h2>
+            <div className="mt-7 grid gap-3">
+              {deliverables.map((item) => (
+                <div key={item} className="rounded-2xl bg-white/[0.07] p-4 text-white/72">
+                  <span className="font-semibold text-[#67E8F9]">✓ </span>
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <div className="rounded-2xl bg-[#F4FAFC] p-6">
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Entreprises
-              </h3>
-              <p className="mt-3 text-[#475569] leading-7">
-                Pour renforcer votre image de marque et disposer d’une présence
-                en ligne professionnelle.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-[#F4FAFC] p-6">
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Artisans
-              </h3>
-              <p className="mt-3 text-[#475569] leading-7">
-                Pour montrer votre savoir-faire, vos prestations et faciliter la
-                prise de contact.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-[#F4FAFC] p-6">
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Indépendants
-              </h3>
-              <p className="mt-3 text-[#475569] leading-7">
-                Pour gagner en crédibilité et présenter vos services de manière
-                claire et convaincante.
-              </p>
+          <div className="rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Petites interventions
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Corriger vite ce qui freine vos prospects.
+            </h2>
+            <div className="mt-7 grid gap-4">
+              {quickOffers.map((offer) => (
+                <div key={offer.title} className="rounded-2xl bg-white/[0.07] p-5">
+                  <p className="font-bold text-[#67E8F9]">{offer.price}</p>
+                  <h3 className="mt-1 font-semibold text-white">
+                    {offer.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-white/58">
+                    {offer.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* MÉTHODE */}
       <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#173C91]">
-              Ma méthode
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#67E8F9]">
+              Maintenance
             </p>
-
-            <h2 className="text-3xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-              Un accompagnement simple et efficace
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Garder une présence fiable après la mise en ligne.
             </h2>
-
-            <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
-              Une approche claire pour créer un site adapté à votre activité, sans vous
-              perdre dans la technique.
-            </p>
           </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {maintenanceOffers.map((offer) => (
+              <article key={offer.title} className="rounded-3xl bg-white/[0.075] p-6 shadow-sm">
+                <p className="font-bold text-[#67E8F9]">{offer.price}</p>
+                <h3 className="mt-2 text-xl font-bold text-white">
+                  {offer.title}
+                </h3>
+                <p className="mt-3 leading-7 text-white/70">{offer.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {/* STEP 1 */}
-            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
-                1
-              </div>
-
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Échange
-              </h3>
-
-              <p className="mt-3 text-[#475569] leading-7">
-                Nous faisons le point sur votre activité, vos besoins et les
-                informations à mettre en avant.
-              </p>
-            </div>
-
-            {/* STEP 2 */}
-            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
-                2
-              </div>
-
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Adaptation
-              </h3>
-
-              <p className="mt-3 text-[#475569] leading-7">
-                J’adapte la structure du site à votre image : textes, couleurs,
-                contenus, sections et appels à l’action.
-              </p>
-            </div>
-
-            {/* STEP 3 */}
-            <div className="bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#173C91] text-sm font-bold text-white">
-                3
-              </div>
-
-              <h3 className="text-xl font-semibold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-                Mise en ligne
-              </h3>
-
-              <p className="mt-3 text-[#475569] leading-7">
-                Le site est finalisé, vérifié puis mis en ligne avec une base propre et
-                professionnelle.
-              </p>
-            </div>
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl rounded-4xl border border-white/12 bg-white/[0.075] p-8 shadow-sm md:p-12">
+          <div className="grid gap-8 lg:grid-cols-3">
+            {trustPillars.map((pillar) => (
+              <article key={pillar.title}>
+                <h2 className="text-xl font-bold text-white">
+                  {pillar.title}
+                </h2>
+                <p className="mt-3 leading-7 text-white/70">{pillar.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="px-6 pb-28">
-        <div className="max-w-6xl mx-auto text-center bg-white rounded-3xl border border-[#061A35]/10 shadow-sm p-10 md:p-14">
-          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] bg-clip-text text-transparent">
-            Vous avez un projet de site internet ?
+        <div className="mx-auto max-w-6xl rounded-4xl bg-[#061A35] p-8 text-center text-white md:p-12">
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Vous ne savez pas quelle prestation choisir ?
           </h2>
-
-          <p className="mt-4 text-[#475569] max-w-3xl mx-auto leading-8">
-            Envoyez-moi votre besoin et je vous proposerai une première approche
-            claire, adaptée à votre activité.
+          <p className="mx-auto mt-4 max-w-3xl leading-8 text-white/75">
+            Expliquez simplement le contexte, l&apos;objectif et les contraintes.
+            DEVORA vous oriente vers une correction rapide, une page de vente,
+            un tableau de pilotage, une automatisation ou une démonstration privée.
           </p>
-
-          <p className="mt-3 text-sm font-medium text-[#173C91]">
-            Réponse sous 24 à 48h ouvrées, souvent plus rapide.
-          </p>
-
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <TrackedLink
               href="/contact"
-              className="px-8 py-4 bg-linear-to-r from-[#061A35] via-[#173C91] to-[#2DBEB5] text-white rounded-full shadow-sm hover:brightness-110 transition"
+              eventName="cta_services_final_contact"
+              eventLabel="Services final"
+              className="rounded-full bg-linear-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] px-8 py-4 text-center font-semibold text-white transition hover:brightness-110"
             >
-              Obtenir un devis gratuit
-            </Link>
-
+              Obtenir un avis clair
+            </TrackedLink>
             <Link
-              href="/portfolio"
-              className="px-8 py-4 border border-[#173C91] text-[#173C91] rounded-full hover:bg-[#EFF9F8] transition"
+              href="/simulateur"
+              className="rounded-full border border-white/30 px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10"
             >
-              Voir mes réalisations
+              Utiliser le simulateur
             </Link>
           </div>
         </div>

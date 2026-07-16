@@ -1,74 +1,74 @@
-import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devora-freelance.fr";
+import { siteUrl } from "@/data/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "DevOra | Création de site internet en Normandie – Développeur web freelance",
-    template: "%s | DevOra",
+    default: "DEVORA - Sites premium, outils métier, IA utile et Sentinel",
+    template: "%s | DEVORA",
   },
   description:
-    "Développeur web freelance en Normandie. Création de sites vitrines modernes, refonte de site et accompagnement digital pour entreprises, artisans et indépendants.",
-  applicationName: "DevOra",
+    "DEVORA crée des sites premium, outils métier, tableaux de pilotage, automatisations utiles, IA locale et solutions Sentinel pour mieux vendre, suivre et gagner du temps.",
   keywords: [
-    "développeur web en Normandie",
-    "création site internet en Normandie",
-    "site vitrine en Normandie",
-    "refonte site web en Normandie",
-    "freelance web en Normandie",
-    "création site vitrine Normandie",
+    "DEVORA",
+    "outils métier",
+    "DEVORA Sentinel",
+    "création site premium",
+    "tableau de pilotage",
+    "outil business",
+    "automatisation utile",
+    "sécurité défensive",
+    "IA locale",
+    "site premium",
   ],
-  icons: {
-    icon: "/Logo.jpg",
-    shortcut: "/Logo.jpg",
-    apple: "/Logo.jpg",
+  authors: [{ name: "DEVORA" }],
+  creator: "DEVORA",
+  publisher: "DEVORA",
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
-    type: "website",
+    title: "DEVORA - Sites premium, outils métier, IA utile et Sentinel",
+    description:
+      "Sites premium, tableaux de pilotage, automatisations utiles, outils privés et Sentinel pour mieux vendre, suivre et gagner du temps.",
+    url: siteUrl,
+    siteName: "DEVORA",
     locale: "fr_FR",
-    siteName: "DevOra",
+    type: "website",
     images: [
       {
-        url: "/devora-header.png",
-        width: 1200,
-        height: 630,
-        alt: "DevOra - Création de sites internet en Normandie",
+        url: "/assets/devora-logo.png",
+        width: 1536,
+        height: 1024,
+        alt: "Identité visuelle DEVORA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/devora-header.png"],
+    title: "DEVORA - Sites premium, outils métier, IA utile et Sentinel",
+    description:
+      "Sites premium, outils métier, automatisations utiles et DEVORA Sentinel.",
+    images: ["/assets/devora-logo.png"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
   },
+  icons: {
+    icon: [{ url: "/assets/devora-hexagon.png", type: "image/png" }],
+    shortcut: "/assets/devora-hexagon.png",
+    apple: "/assets/devora-hexagon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "dark",
+  themeColor: "#050713",
 };
 
 export default function RootLayout({
@@ -77,15 +77,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-[#FBFDFF] text-[#061A35]">
-        <Header />
-        {children}
-        <Analytics />
-        <Footer />
+    <html lang="fr" className="scroll-smooth">
+      <body>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

@@ -1,0 +1,19 @@
+
+> mon-site-vitrine@0.1.0 dev
+> next dev --port 3110
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3110
+- Network:       http://192.168.1.98:3110
+✓ Ready in 1729ms
+
+ GET / 200 in 3.2s (next.js: 2.3s, application-code: 827ms)
+ GET /portfolio 200 in 377ms (next.js: 246ms, application-code: 131ms)
+ GET /portfolio/devora-sentinel 200 in 634ms
+✓ Compiled in 97ms
+✓ Compiled in 46ms
+✓ Compiled in 47ms
+✓ Compiled in 96ms
+✓ Compiled in 86ms
+✓ Compiled in 45ms
+✓ Compiled in 49ms
