@@ -5,6 +5,7 @@ import type { NextConfig } from "next";
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["172.22.64.1"],
   turbopack: {
     root: projectRoot,
   },
