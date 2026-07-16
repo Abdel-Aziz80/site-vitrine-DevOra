@@ -908,6 +908,14 @@ article {
   display: inline-flex;
 }
 
+.devora-page .block {
+  display: block;
+}
+
+.devora-page .hidden {
+  display: none;
+}
+
 .devora-page .flex-col {
   flex-direction: column;
 }
@@ -918,6 +926,10 @@ article {
 
 .devora-page .items-center {
   align-items: center;
+}
+
+.devora-page .items-start {
+  align-items: flex-start;
 }
 
 .devora-page .justify-center {
@@ -991,6 +1003,11 @@ article {
 .devora-page .py-2 {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.devora-page .py-1\.5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .devora-page .py-3 {
@@ -1072,8 +1089,16 @@ article {
   margin-top: 40px;
 }
 
+.devora-page .mb-2 {
+  margin-bottom: 8px;
+}
+
 .devora-page .text-sm {
   font-size: 0.875rem;
+}
+
+.devora-page .text-xs {
+  font-size: 0.75rem;
 }
 
 .devora-page .text-lg {
@@ -1094,6 +1119,14 @@ article {
 
 .devora-page .text-4xl {
   font-size: 2.25rem;
+}
+
+.devora-page .text-5xl {
+  font-size: 3rem;
+}
+
+.devora-page .text-6xl {
+  font-size: 3.75rem;
 }
 
 .devora-page .font-medium {
@@ -1230,6 +1263,30 @@ article {
     border-color 180ms ease,
     filter 180ms ease,
     transform 180ms ease;
+}
+
+.devora-page .outline-none {
+  outline: none;
+}
+
+.devora-page .resize-none {
+  resize: none;
+}
+
+.devora-page .space-y-2 > :not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.devora-page .space-y-4 > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.devora-page .space-y-5 > :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.devora-page .space-y-8 > :not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .primary-cta,
@@ -2188,6 +2245,19 @@ h3 {
   color: #f8fbff;
 }
 
+.devora-page > .devora-dark-section:first-child {
+  padding-top: clamp(104px, 9vw, 136px) !important;
+}
+
+.devora-page > section:last-child {
+  padding-bottom: clamp(54px, 6vw, 78px) !important;
+}
+
+.devora-page > section:last-child + .devora-footer,
+.devora-page + .devora-footer {
+  margin-top: 0;
+}
+
 .devora-page h1 {
   font-size: clamp(1.85rem, 3.4vw, 3.1rem);
   line-height: 1.1;
@@ -2453,6 +2523,10 @@ h3 {
     display: none;
   }
 
+  .devora-page .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .devora-page .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2514,6 +2588,14 @@ h3 {
 
   .devora-page .md\:p-12 {
     padding: 48px;
+  }
+
+  .devora-page .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .devora-page .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .devora-page .md\:text-4xl {

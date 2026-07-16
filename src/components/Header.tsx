@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TrackedLink from "@/components/TrackedLink";
@@ -25,6 +25,31 @@ const zoneLinks = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const mobileMenuId = useId();
+  const zonesRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    function closeZonesOnOutsideClick(event: PointerEvent) {
+      if (!zonesRef.current?.open) {
+        return;
+      }
+
+      if (!zonesRef.current.contains(event.target as Node)) {
+        zonesRef.current.open = false;
+      }
+    }
+
+    document.addEventListener("pointerdown", closeZonesOnOutsideClick);
+
+    return () => {
+      document.removeEventListener("pointerdown", closeZonesOnOutsideClick);
+    };
+  }, []);
+
+  function closeZonesMenu() {
+    if (zonesRef.current) {
+      zonesRef.current.open = false;
+    }
+  }
 
   return (
     <header className="devora-header">
@@ -54,7 +79,16 @@ export default function Header() {
               </Link>
             ))}
 
-            <details className="devora-header-zones">
+            <details
+              ref={zonesRef}
+              className="devora-header-zones"
+              onMouseLeave={closeZonesMenu}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  event.currentTarget.open = false;
+                }
+              }}
+            >
               <summary className="devora-header-zones-trigger">
                 Zones <span className="devora-header-zones-arrow">▾</span>
               </summary>
@@ -64,6 +98,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={closeZonesMenu}
                     className="devora-header-zone-link"
                   >
                     {link.label}
